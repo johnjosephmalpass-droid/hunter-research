@@ -31,14 +31,14 @@ This project is built and run by a single person: John Malpass, second‑year BS
 - **Corpus (Zenodo, CC‑BY‑4.0)** — 12,030 facts across 18 silos, 77 countries, 30,967 normalised entity‑index entries, 11,835 distinct entities, 6,670 model‑field extractions, 474 cross‑silo collisions, 171 directed causal edges with named transmission pathways, 52 multi‑link chains, 1,570 detected anomalies, 61 formed hypotheses with completed adversarial review, and 1,155 theory‑evidence records across 13 framework layers. DOI: *pending Zenodo reserve*.
 - **Methods paper (Paper 0, SSRN)** — Instrument description, pipeline stages, model‑field extraction, implication matching, differential edge, and kill‑phase design. *Submission pending April 2026.*
 - **Theoretical and empirical drafts (SSRN, rolling)** — drafts on the mechanism‑assembly bottleneck (Paper 2), the non‑zero compositional residual (Paper 3), and the cross‑silo composition test (Paper 4). Empirical claims in the framework papers are presented as pre‑registered hypotheses until summer replication completes.
-- **Prediction board** — public, timestamped, resolvable. URL: `https://johnjosephmalpass-droid.github.io/hunter-research/`
+- **Prediction board** — public, timestamped, resolvable. URL: `https://Johnmalpass.github.io/hunter-research/`
 - **Methodology brief (PDF, 2 pages)** — free, publicly downloadable, linked on the prediction board.
 - **Pre‑registration manifest** — `preregistration.json`, SHA‑256 locked at hash `f39d2f5ff6b3e695`, corpus frozen 2024‑12‑31, code hash locked 2026‑04‑19.
 
 ## Quick start
 
 ```bash
-git clone https://github.com/johnjosephmalpass-droid/hunter-research.git
+git clone https://github.com/Johnmalpass/hunter-research.git
 cd hunter-research
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
