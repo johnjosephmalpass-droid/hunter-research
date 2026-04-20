@@ -1,0 +1,31 @@
+HUNTER Cross-Silo Financial Corpus v1 — Data License
+======================================================
+
+The dataset accompanying this repository (the "HUNTER Cross-Silo Financial
+Corpus v1", released via Zenodo with a persistent DOI) is made available under
+the Creative Commons Attribution 4.0 International License (CC-BY-4.0).
+
+You are free to:
+
+  - Share — copy and redistribute the material in any medium or format.
+  - Adapt — remix, transform, and build upon the material, for any purpose,
+    even commercially.
+
+Under the following terms:
+
+  - Attribution — You must give appropriate credit, provide a link to the
+    license, and indicate if changes were made. You may do so in any
+    reasonable manner, but not in any way that suggests the licensor endorses
+    you or your use.
+
+Preferred citation:
+
+    Malpass, J. (2026). HUNTER Cross-Silo Financial Corpus v1
+    (frozen April 2026) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.XXXXXXX
+
+Full license text: https://creativecommons.org/licenses/by/4.0/legalcode
+
+This data license (CC-BY-4.0) applies to the corpus, schema descriptions, and
+all derived empirical artefacts distributed via the Zenodo record. The source
+code in this repository is licensed separately under the MIT License; see the
+LICENSE file at the repository root.

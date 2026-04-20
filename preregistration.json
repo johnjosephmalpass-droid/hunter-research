@@ -1,0 +1,124 @@
+{
+  "created_at": "2026-04-19T19:45:02.836627",
+  "study_name": "HUNTER Compositional Alpha Study, Summer 2026",
+  "study_duration_weeks": 12,
+  "corpus_cutoff": "2024-12-31",
+  "holdout_start": "2025-01-01",
+  "corpus_fact_count": 3557,
+  "corpus_fact_id_hash": "4824947e69761b2ec6c201cfc60b6f06",
+  "corpus_fact_id_sample": [
+    104,
+    230,
+    273,
+    276,
+    278,
+    279,
+    286,
+    306,
+    355,
+    400,
+    423,
+    424,
+    425,
+    426,
+    427,
+    464,
+    502,
+    510,
+    511,
+    590,
+    12073,
+    12074,
+    12075,
+    12076,
+    12078,
+    12079,
+    12081,
+    12082,
+    12083,
+    12084,
+    12085,
+    12086,
+    12087,
+    12088,
+    12089,
+    12092,
+    12093,
+    12094,
+    12095,
+    12096
+  ],
+  "code_hash": "f39d2f5ff6b3e695",
+  "strata": {
+    "A": {
+      "name": "Single-domain control",
+      "criterion": "num_domains == 1",
+      "expected_alpha_sign": "\u2248 0 (null)",
+      "n_in_corpus": 0
+    },
+    "B": {
+      "name": "Two-domain baseline",
+      "criterion": "num_domains == 2",
+      "expected_alpha_sign": "small positive",
+      "n_in_corpus": 0
+    },
+    "C": {
+      "name": "Three-domain",
+      "criterion": "num_domains == 3",
+      "expected_alpha_sign": "positive",
+      "n_in_corpus": 0
+    },
+    "D": {
+      "name": "Four-plus-domain (compositional)",
+      "criterion": "num_domains >= 4",
+      "expected_alpha_sign": "large positive",
+      "n_in_corpus": 0
+    }
+  },
+  "primary_hypothesis": "Median portfolio alpha (vs SPY total return over position time_window_days) increases monotonically: A \u2264 B \u2264 C \u2264 D, with D\u2212A > 0 at p < 0.05 via paired bootstrap (10,000 resamples).",
+  "secondary_hypotheses": [
+    "H2: Detected cycles (detected_cycles table, reinforcement >= 0.5) persist (remain un-corrected in the market) for >= 14 days in \u2265 2 of 9 known cycles.",
+    "H3: Cross-silo collisions (domain_distance >= 0.60) produce higher adjusted_score than within-silo (< 0.30) by >= 10 points on average.",
+    "H4: Chain depth d=3 hypotheses outperform d=1 hypotheses in realised alpha with effect size Cohen's d >= 0.3."
+  ],
+  "null_baselines": [
+    {
+      "name": "random_pair_control",
+      "method": "Randomly pair N facts from distinct source types. Run the full pipeline. Compare alpha to strata B.",
+      "expected_result": "random_pair alpha \u2264 stratum_B alpha"
+    },
+    {
+      "name": "within_silo_control",
+      "method": "Run pipeline forcing both facts to share source_type. Compare alpha to strata A.",
+      "expected_result": "within_silo alpha \u2248 stratum_A alpha"
+    },
+    {
+      "name": "shuffle_label_control",
+      "method": "Shuffle the source_type labels on facts before running. Compare alpha.",
+      "expected_result": "shuffled alpha \u2248 0 (destroys cross-silo signal)"
+    }
+  ],
+  "decision_rules": {
+    "primary_wins": "D \u2212 A > 0, p < 0.05, monotonicity holds. Accept compositional alpha hypothesis.",
+    "primary_loses": "D \u2264 B OR monotonicity violated. Reject. Write null-result paper.",
+    "must_not_do": [
+      "Do not add new facts to the corpus after the cutoff.",
+      "Do not change scoring weights after the cutoff.",
+      "Do not swap primary endpoint for secondary if primary fails.",
+      "Do not exclude hypotheses retroactively for 'quality'.",
+      "Report ALL 4 strata outcomes even if one is embarrassing."
+    ]
+  },
+  "power_analysis": {
+    "min_n_per_stratum_recommended": 30,
+    "current_sufficient": false,
+    "total_collisions_in_scope": 0,
+    "notes": "Power analysis assumes Cohen's d = 0.3, alpha = 0.05, power = 0.80. If a stratum < 30, need to run more cycles."
+  },
+  "strata_partial": {
+    "A": 5,
+    "B": 5,
+    "C": 8,
+    "D": 25
+  }
+}

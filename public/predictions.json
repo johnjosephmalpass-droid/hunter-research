@@ -1,0 +1,16 @@
+{
+  "generated_at": "2026-04-20T16:10:43.043317",
+  "track_record": {
+    "total_predictions": 0,
+    "resolved": 0,
+    "wins": 0,
+    "losses": 0,
+    "partials": 0,
+    "pending": 0,
+    "expired_unresolved": 0,
+    "hit_rate": null,
+    "brier_score": null,
+    "calibration": {}
+  },
+  "predictions": []
+}

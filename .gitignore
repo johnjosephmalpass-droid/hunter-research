@@ -1,0 +1,59 @@
+# Environment / secrets
+.env
+.env.save
+.env.*
+!.env.example
+
+# Databases (released separately via Zenodo DOI)
+*.db
+*.db.backup*
+*.db-journal
+
+# Logs
+*.log
+
+# Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+*.egg-info/
+.venv/
+venv/
+
+# macOS
+.DS_Store
+
+# Internal strategy docs (not for public release)
+MONEY_STRATEGY.md
+MONEY_STRATEGY.pdf
+GENERATIONAL_STRATEGY.md
+MOAT_REASSESSMENT.md
+SUMMER_2026_OPERATION.md
+SUMMER_2026_OPERATION.pdf
+SUMMER_PROTOCOL.md
+BUILD_PLAN.md
+HANDOFF_CLAUDE_BRIEFING.md
+HANDOFF_CLAUDE_BRIEFING.pdf
+HUNTER_PITCH.md
+HUNTER_Portfolio_Report.html
+
+# Personal / operational
+advisor_emails/
+diary/
+orders/
+reports/
+proposed_changes/
+goals.json
+
+# Old experiments (kept locally, not for public release)
+archive/
+
+# IDE / editor
+.idea/
+.vscode/
+*.swp
+*~
+hunter_coin.py
