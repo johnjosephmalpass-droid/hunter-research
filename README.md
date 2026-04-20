@@ -20,7 +20,7 @@ Pre‑freeze empirical observations (the mechanism/audience kill asymmetry; the 
 
 ## A note on the operator
 
-This project is built and run by a single person: John Malpass, 19, second‑year BSc Economics at University College Dublin. That is relevant context for how the work should be read. The repository is public for a reason — priority of discovery is claimed at the moment of posting, and honest public critique is worth more to the project than private reassurance. Prior‑art pointers, design criticism, and replication attempts are all welcome. Contact details are below.
+This project is built and run by a single person: John Malpass, second‑year BSc Economics at University College Dublin. That is relevant context for how the work should be read. The repository is public for a reason — priority of discovery is claimed at the moment of posting, and honest public critique is worth more to the project than private reassurance. Prior‑art pointers, design criticism, and replication attempts are all welcome. Contact details are below.
 
 ## Key artifacts
 
