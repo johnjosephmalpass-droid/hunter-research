@@ -1,7 +1,7 @@
 # HUNTER — Empirical Findings Report
 
 Generated 2026-04-18 by running the seven new analyser modules against the
-existing 12,033-fact corpus, 474 collisions, 61 hypotheses, and 20 surviving theses.
+existing 12,030-fact corpus, 474 collisions, 61 hypotheses, and 20 surviving theses.
 
 This document answers the 10 "open questions" with real numbers from real data.
 Some findings **support** the framework. Some **challenge** it. Some **reverse**

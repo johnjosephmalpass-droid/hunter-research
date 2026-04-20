@@ -115,6 +115,8 @@ A 12-week out-of-sample study runs June 1 – August 31, 2026 on the frozen corp
 
 **Primary test.** Median realised alpha over SPY total return, ordered across four strata by how many distinct silos the hypothesis combines: A (1) ≤ B (2) ≤ C (3) ≤ D (≥4), with D − A > 0 at p < 0.05 under a 10,000-resample paired bootstrap. Strata are fixed in `config.py`.
 
+**Prior contradictory evidence — and why the study still runs.** An earlier retrospective pilot (the "v3 Golden" validation run, `V3_GOLDEN_*` constants in `config.py`) produced Stratum D < Stratum B, directly contradicting H1. That pilot ran with `RETROSPECTIVE_DISABLE_WEB_SEARCH = True` — i.e. the kill phase could not check causal mechanisms against live web evidence, which is the specific channel through which cross-silo advantages are supposed to manifest. The summer 2026 study runs prospectively with web-searched mechanism kills, which is the regime H1 is actually about. If the summer study also produces D ≤ B or violates monotonicity, the manifest's decision rule kicks in: reject H1, ship the null paper, and treat the framework as needing structural revision (not recalibration). That outcome is explicitly on the table. See `THEORY_CANON.md` §2 claim C4 for the full epistemic state.
+
 **Secondary tests.**
 - **H2** — Detected cycles (reinforcement ≥ 0.5) persist uncorrected in the market for ≥ 14 days in ≥ 2 of the 9 currently detected cycles.
 - **H3** — Cross-silo collisions (domain distance ≥ 0.60) score ≥ 10 points higher than within-silo (< 0.30) on average.

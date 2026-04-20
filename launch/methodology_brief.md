@@ -61,7 +61,7 @@ Apr 28, 2026 launch · Jun 1 – Aug 31, 2026 pre-registered 12-week out-of-samp
 
 ## Honest limitations
 
-One operator, one instrument. 61 hypotheses in the pre-freeze corpus is small; summer 2026 targets n $\geq$ 300. About 60% of pre-freeze high-scoring hypotheses concentrate in CMBS / insurance / regulatory-transition finance. Generator and reviewer share an LLM substrate; decorrelation is attempted via fresh context, web-searched kill rounds, calibrated anchors, and three pre-registered null baselines. Zero predictions resolved as of launch. The operator is a second-year undergraduate; formal theoretical work awaits senior-theorist collaboration.
+One operator, one instrument. 61 hypotheses in the pre-freeze corpus is small; summer 2026 targets n $\geq$ 300. About 60% of pre-freeze high-scoring hypotheses concentrate in CMBS / insurance / regulatory-transition finance. Generator and reviewer share an LLM substrate; decorrelation is attempted via fresh context, web-searched kill rounds, calibrated anchors, and three pre-registered null baselines. **An earlier retrospective pilot (v3 Golden, web-search disabled) produced Stratum D $<$ Stratum B, contradicting the primary hypothesis. The summer study runs prospectively with web-searched kill rounds — the regime H1 is actually about — and commits to ship the null paper if D $\leq$ B or monotonicity fails. See README §Pre-registered Study.** Zero predictions resolved as of launch. Operator is a second-year undergraduate; formal theoretical work awaits senior-theorist collaboration.
 
 ## Artifacts and contact
 
