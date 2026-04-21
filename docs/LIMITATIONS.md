@@ -6,9 +6,9 @@
 
 One person built and runs HUNTER. Independent replication by a second instrument operated by different researchers is required before any claim is generalised. The public release of corpus, code, and manifest is intended to make that replication possible.
 
-## L2. Small pre-freeze sample
+## L2. Two-tier pre-freeze hypothesis corpus
 
-61 hypotheses with completed adversarial review is small. The pre-registered summer 2026 out-of-sample study targets n ≥ 300 and is the primary evidence base for every published empirical claim.
+The corpus contains 324 hypotheses that have been through adversarial review, stored in two tables. **`hypotheses_archive` (263 rows, March 28 – April 3, 2026)** is the earlier original-pipeline output. **`hypotheses` (61 rows, April 1 – April 4, 2026)** is a later run under an adversarial-review-upgrade pipeline tier. They are not interchangeable: the archive was produced under one set of prompts and review rules; the main table under another. Narrative scoring, and therefore the r = −0.49 narrative/survival correlation, was applied only to the main 61, not to the archive 263. When interpreting specific pre-freeze metrics, filter explicitly to the table and pipeline tier the metric was computed on. The pre-registered summer 2026 out-of-sample study targets an additional n ≥ 300 under frozen conditions and is the primary evidence base for every published empirical claim.
 
 ## L3. LLM substrate contamination
 

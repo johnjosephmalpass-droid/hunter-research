@@ -6,6 +6,8 @@ The HUNTER corpus produced several empirical observations during the pre-freeze 
 
 ## 1. Narrative strength negatively predicts kill survival (r = −0.49)
 
+**Scope.** This is measured on the **61 hypotheses in the main `hypotheses` table** where narrative scoring was applied. The 263 earlier-pipeline hypotheses in `hypotheses_archive` do not have narrative scores computed and are not part of this measurement. Claim scope is "r = −0.49 on n = 61," not "across all hypotheses HUNTER has produced."
+
 **What I predicted.** Hypotheses with clean narrative structure (clear protagonist, catalyst, resolution) would persist longer through adversarial review, because a smooth story is harder to dislodge.
 
 **What the pre-freeze data showed.** The opposite. Hypotheses with high narrative strength (score ≥ 0.6) died in the kill rounds every time (0% survival, n = 3). Hypotheses with low narrative strength (< 0.4) survived 58% of the time (n = 24). Pearson r = −0.49 between narrative strength and survival, r = −0.52 against diamond score.
