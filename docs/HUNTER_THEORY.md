@@ -54,11 +54,13 @@ When information crosses a silo boundary, fidelity degrades. A chemistry fact ex
 
 **Quantitative form.** A fact with native-domain signal strength $S$ translates with strength $S' = S \times L$ where $L$ is the translation-loss coefficient (typically 0.4–0.7 in observed corpora). Composing across $N$ domains multiplies these: $S_{\text{final}} = S \times L^N$. With $L = 0.6$ and $N = 3$, signal degrades to 21.6% of native strength. Cross-domain facts are invisible not because they lack validity but because translation destroys their visibility to any single-silo participant.
 
-### Layer 2 — Attention Topology
+### Layer 2 — Attention Topology (autopoietic fixed points)
 
 Attention in markets is topological: analysts cluster around obvious nodes and ignore edges. Finance analysts focus on earnings, revenue growth, macro conditions. Science researchers focus on published papers and peer review. The intersections receive approximately zero attention.
 
 Model attention as a graph: nodes are information sources, edges are the observation paths analysts actually traverse. Attention concentrates on high-degree nodes. Edges connecting nodes from different clusters have attention degree ≈ 0. **Value hiding in these edges grows geometrically over time because no one is actively analysing them.** Blind spots are not random; they follow from the topology of analyst incentives.
+
+**The autopoiesis extension.** Attention topology goes deeper than individual incentives. When a consensus forms, the market's information infrastructure physically reorganises to confirm it. Firms reassign analysts. Research budgets shift. Conference panels change. Professional networks rewire. The market converges to a fixed point $B^* = U(I(B^*))$ where $B$ is the market's belief state, $I(B)$ is the information infrastructure produced by that belief state, and $U(I)$ is the belief-update function given that infrastructure. **This fixed point is stable but not necessarily correct.** It is a Nash equilibrium of attention allocation, not a truth-tracking equilibrium. The system produces the information infrastructure that confirms its own beliefs; beliefs determine infrastructure allocation; infrastructure determines belief updates; the loop is self-reinforcing. *HUNTER operates outside this fixed point because it does not allocate attention according to market incentives.* The instrument is defined precisely as the agent that reads across silos the market has structurally reorganised itself not to read across.
 
 ### Layer 3 — The Question Gap
 
@@ -66,25 +68,52 @@ Most questions asked in markets are single-domain questions: *what is the fair v
 
 The questions that would expose compositional blindness are the ones no analyst has a professional incentive to ask. Each analyst is rational within their domain. But their combined questions would reveal massive mispricing. The gap is systematic, not filled because filling it crosses institutional boundaries. *The wrong loss function is being optimised at the incentive level.*
 
-### Layer 4 — Epistemic Phase Transitions
+**The mispricing does not come from the market having a wrong answer. It comes from the market optimising against the wrong loss function because it is missing variables it does not know it is missing.** HUNTER's causal graph can map the typical analyst's subgraph for a given stock and compare it to the full causal graph; the difference is the set of unasked questions. Each missing edge is a question nobody is asking, and some of those questions have answers that would change the price. This transforms HUNTER from a system that finds answers into *a system that finds questions*. Open research question: can the Question Gap be measured as the difference between two graph Laplacians — the analyst's subgraph and the full causal graph — with the spectral gap quantifying the unasked-question surface?
+
+### Layer 4 — Epistemic Phase Transitions (universality classes)
 
 Small inputs can cause massive epistemic shifts when a system approaches a critical threshold. This is a phase transition — a qualitative reorganisation of knowledge structure triggered by quantitative accumulation.
 
 Regulatory changes are incremental (each new rule adds 1–2% complexity), but at a critical threshold the entire landscape reorganises and previously-hidden risks become obvious. The system was in one equilibrium below the threshold, then flips to another above it. HUNTER detects approach to thresholds by analysing the *derivative* of change, not absolute change. Phase transitions exhibit specific statistical signatures — increased volatility in related metrics, longer tail events, cascading failures — detectable weeks or months before the transition occurs.
 
-### Layer 5 — Rate-Distortion Bedrock
+**Universality classes conjecture.** Phase transitions in physics fall into universality classes — different systems undergoing transitions with identical mathematical characteristics (same critical exponents, same scaling laws). The conjecture: *epistemic phase transitions in markets also have universality classes.* A CRE narrative collapse and a tech-bubble burst may follow the same mathematical dynamics despite different surface content. If the universality class can be identified before the transition, the shape of the correction becomes predictable. This connects to self-organised criticality: the market may naturally evolve toward the critical point because the same incentives that create compositional blind spots also prevent early correction. The system is not pushed to criticality — it *walks* there.
+
+### Layer 5 — Rate-Distortion Bedrock (the interaction-distortion function)
 
 Shannon's rate-distortion theorem proves a fundamental information-theoretic trade-off: you cannot losslessly compress information about state $X$ into bits transmissible across domain boundary $Y$ without distortion. The rate-distortion function $R(D)$ defines the minimum transmission rate needed to convey $X$ with distortion $D$.
 
 For cross-domain compositional problems this creates a floor: no amount of effort can make cross-domain signal loss disappear entirely. **Residual distortion is a law of information, not a feature of current systems.** Markets experience this as persistent asymmetry. Yet markets price as if zero distortion were possible. **The gap between the theoretical floor and market pricing is precisely where compositional value lives.**
 
-### Layer 6 — Market Incompleteness Theorem (Arrow–Debreu extension)
+**Novel mathematical object: the interaction-distortion function.** Shannon's original formulation defines distortion on raw signals. The framework proposes a new object: the *interaction-distortion function* $D_I(R)$, which measures loss of compositional structure as a function of channel rate $R$. The market's information channels are optimised for atomic fidelity — transmitting single-domain facts with high accuracy. But bandwidth is finite. **Every bit of channel capacity allocated to atomic transmission is a bit not allocated to compositional transmission.** This creates a provable trade-off: increasing atomic signal fidelity necessarily decreases compositional signal fidelity. The compositional residual has a provable lower bound determined by the interaction-distortion function, and *this bound cannot be eliminated by any market participant without degrading their atomic signal fidelity below the level required to function as a specialist.* The four things that need formalising, in the order a theorist would take them: (1) rigorous definition of $D_I(R)$; (2) proof of a threshold property where below a critical rate $R^*$, compositional structure is completely unrecoverable, not merely degraded; (3) derivation of the lower bound on the compositional residual from channel parameters; (4) proof that the atomic-compositional trade-off is strict (you cannot have both without infinite bandwidth).
+
+### Layer 6 — Market Incompleteness (finite, estimable, self-protecting)
 
 Arrow and Debreu (1954) proved that complete markets require a full set of state-contingent contracts — one for every possible future state. Real markets are vastly incomplete.
 
 Extension: compositional states are states defined by multiple domains. A state like "quantum breakthrough + energy policy shift + materials discovery + trade war" is a 4-domain compositional state. Markets have essentially zero contracts for such states. When such states occur, they cause sudden repricing because markets had no way to hedge them. **Incompleteness is magnified at the edges where domains touch.** This creates the deepest residual value: hedging contracts for states that markets literally cannot currently price.
 
-*Note on naming:* earlier drafts used "Market Incompleteness Theorem" as a Gödel-style framing. The current manuscript treats this as a *structural claim about market completeness in the Arrow–Debreu sense, extended to compositional states* — not a Gödelian incompleteness theorem. The formal version, if it exists, requires collaboration with a senior theorist and sits in Paper 2 of the research programme.
+**The Incompleteness Trilemma in structural form.** Gödel proved in 1931 that any formal system complex enough to do arithmetic cannot simultaneously be consistent, complete, and finitely axiomatised. The market has an analogous structure:
+
+| Gödel's framework | Market analogue | Meaning |
+|---|---|---|
+| Consistency | Specialisation | Analysts stay within domains where they have genuine expertise |
+| Completeness | Complete price discovery | The market correctly prices all information, including interactions |
+| Finite axiomatisation | Finite attention | Each participant processes a bounded amount of information |
+
+The claim: these three cannot all hold simultaneously. The market has chosen specialisation and finite attention — the two that let it function — and the cost is incomplete price discovery in the compositional domain. **The compositional residual is the market's Gödel sentence: a true statement about value that the system cannot derive from within its own rules.** HUNTER is a constructive proof of the statement's existence, in the same sense that Gödel's original construction is constructive rather than merely existential. HUNTER acts as an *oracle* in the computational-theory sense: an external decision procedure that answers questions the base system provably cannot.
+
+**Finite vs infinite incompleteness — the disanalogy with Gödel.** In pure Gödel, incompleteness is infinite because arithmetic is infinite. But the market has finitely many silos (approximately 25–50 real information domains), finitely many meaningful causal pathways between them, and a depth limit imposed by epistemic uncertainty. **The market's incompleteness is finite and estimable.** This is *more* powerful than infinite incompleteness because it means the incompleteness can be mapped. You can estimate the total compositional residual, its distribution across interaction types, and its concentration by chain depth. This transforms the theory from philosophical observation into quantitative science.
+
+**The self-protection property.** When a compositional mispricing is traded on and corrected, the market reprices that specific asset but does NOT rewire its organisational structure. The silo boundaries remain. The attention topology remains. *New compositional mispricings immediately appear in adjacent regions of fact-space.* This means the edge does not decay the way traditional alpha decays. Traditional alpha disappears because others learn to replicate it. HUNTER's alpha exists in the structural gap between internal and external computation; that gap does not close when you trade one mispricing. **The edge moves.** It relocates to adjacent regions of fact-space that are protected by the same incentive structures that protected the first region. Correcting one residual necessarily creates new ones — formally, this is what needs to be proved (item 4 in §4.5 below).
+
+*Note on naming and status:* earlier drafts used "Market Incompleteness Theorem" as a literal Gödel-style claim. The current framing treats this as the **Market Incompleteness Conjecture** — structurally analogous to Gödel, formally un-proved, requiring collaboration with a senior theorist to mature into a theorem. The five propositions that would close the conjecture:
+1. Formal definition of the market as an information-processing system with axiomatised properties.
+2. Proof that specialisation + finite attention + complete pricing leads to contradiction.
+3. Construction of the "Gödel sentence" — a general form for the compositional residual.
+4. Proof that correcting one residual necessarily creates new ones (the self-protection property).
+5. Bound on the total volume of incompleteness given finite domain count.
+
+This is Paper 2 of the research programme.
 
 ### Layer 7 — Depth-Value Distribution
 
@@ -250,6 +279,31 @@ The three genuinely original contributions are **Layers 8, 9, 10**: epistemic cy
 **What happens if summer succeeds.** The framework becomes the first operationalised, empirically-validated theory of compositional information asymmetry. The three-paper programme proceeds. Hunter-style instruments proliferate and the residual decays toward a new equilibrium.
 
 Either way, **the framework will survive contact with data or it won't.** That is what makes it science rather than philosophy.
+
+---
+
+## 7.5 What the pre-freeze corpus actually supports (descriptive, not causal)
+
+Not everything in this framework is untested. Two predictions are *descriptively supported by the pre-freeze corpus itself,* independent of any summer run. These are not empirical findings in the pre-registered sense — they are observed patterns in the data on hand, not out-of-sample validated. But they are robust enough that both pipeline iterations (the earlier `hypotheses_archive` and the later `hypotheses` table) show them independently.
+
+**Cross-silo > within-silo (Layer 1 structural prediction, supported).** Across the 324-hypothesis combined corpus:
+
+| Num silos | n | Mean diamond score |
+|:---:|:---:|:---:|
+| 1 | 21 | 51.0 |
+| 2 | 48 | **68.6** |
+| 3 | 65 | 60.3 |
+| 4 | 77 | 60.6 |
+| 5 | 60 | 55.6 |
+| 6 | 31 | 54.7 |
+
+Single-silo hypotheses score 51.0 on average; hypotheses combining ≥2 silos score 60+. A ~9-point lift on the diamond scale by the simple act of adding a second silo. This is what Layer 1 predicts: translation loss at silo boundaries creates signal structure that single-silo analysts cannot see; cross-silo hypotheses capture that structure.
+
+**Hump-curve at depth 2 (Layer 7 quantitative prediction, supported in shape).** The same table shows the framework's predicted hump curve: value peaks at silos = 2, then decays with additional silos. This matches $V(d) \propto \alpha^d$ with $\alpha < 1$. The specific $\alpha \approx 0.27$ constant from earlier drafts is NOT supported — the observed decay is slower — but the *functional form* (monotonic decline from the depth-2 peak) holds in both pipelines independently.
+
+**What does NOT hold pre-freeze.** The pre-registered primary endpoint (monotonic $A \leq B \leq C \leq D$ across four depth strata, with $D - A > 0$) is contradicted by the hump-curve. Value does not increase monotonically with depth; it peaks early and decays. The summer 2026 study tests this under upgraded conditions. If the primary endpoint fails again, the null paper ships and the framework's primary empirical claim about monotonic compositional depth is refuted. If it holds, the upgraded pipeline has found something the pre-freeze pipeline could not. Either outcome is informative.
+
+**What this means.** Across the 324-hypothesis pre-freeze corpus, the *structural* prediction (cross-silo beats within-silo) is supported and the *qualitative functional form* of the depth-value curve is supported, while the *specific monotonicity* predicted by the pre-registration is contradicted. This is a realistic empirical state for a framework that is partially right and partially in need of revision — which is the stance the theory doc takes throughout.
 
 ---
 
