@@ -28,7 +28,7 @@ This repository is the public release of a six-month private solo build (Novembe
 
 ## Corpus reconciliation
 
-Two numbers appear in this repository and they measure different things. **Published corpus: 12,030 facts** (the full ingested set released via Zenodo v1, CC-BY-4.0). **Pre-registration-eligible subset: 3,557 facts** (the subset dated on or before the 2024-12-31 cutoff; facts ingested but dated later are quarantined from the primary test). `preregister.py` hashes the eligible subset's fact IDs and locks the hash in `preregistration.json`. Pre-existing collisions in the database mix pre- and post-cutoff facts and are not used for the primary test; the summer study regenerates collisions from the frozen pre-cutoff subset only. The strata partials currently stored in the manifest (A:5, B:5, C:8, D:25) are provisional counts from pre-regeneration collisions; the locked strata counts will be recomputed on the eligible subset at the start of the summer run.
+Two numbers appear in this repository and they measure different things. **Published corpus: 12,030 facts** (the full ingested set released via Zenodo v1, CC-BY-4.0). **Pre-registration-eligible subset: 8,315 facts** (the subset dated on or before the 2026-03-31 cutoff; facts ingested but dated later are quarantined from the primary test). `preregister.py` hashes the eligible subset's fact IDs and locks the hash in `preregistration.json`. Pre-existing collisions in the database mix pre- and post-cutoff facts and are not used for the primary test; the summer study regenerates collisions from the frozen pre-cutoff subset only. The strata partials currently stored in the manifest (A:5, B:5, C:8, D:25) are provisional counts from pre-regeneration collisions; the locked strata counts will be recomputed on the eligible subset at the start of the summer run.
 
 ## A note on the operator
 
@@ -36,12 +36,12 @@ This is built and run by one person: John Malpass, second-year BSc Economics at 
 
 ## Key artifacts
 
-- **Corpus (Zenodo, CC-BY-4.0).** 12,030 facts across 18 silos, 77 countries, 30,967 normalised entity-index entries, 11,835 distinct entities, 6,670 model-field extractions, 474 cross-silo collisions, 171 directed causal edges with named transmission pathways, 52 multi-link chains, 1,570 detected anomalies, 61 formed hypotheses with completed adversarial review, 1,155 theory-evidence records across 13 framework layers. DOI pending Zenodo reserve.
+- **Corpus (Zenodo, CC-BY-4.0).** 12,030 facts across 18 silos, 77 countries, 30,967 normalised entity-index entries, 11,835 distinct entities, 6,670 model-field extractions, 474 cross-silo collisions, 171 directed causal edges with named transmission pathways, 52 multi-link chains, 1,570 detected anomalies, 61 formed hypotheses with completed adversarial review (45 of those scored diamond ≥ 65 and populate the `findings` table), 1,155 theory-evidence records across 13 framework layers. DOI: [10.5281/zenodo.19667567](https://doi.org/10.5281/zenodo.19667567).
 - **Methods paper (Paper 0, SSRN).** Instrument, pipeline, the novel methodology triad, kill-phase design. Submission pending April 2026.
 - **Additional working papers.** Drafts on the mechanism-assembly bottleneck, the formal compositional residual, and the cross-silo composition test ship through summer and autumn. Empirical claims are presented as pre-registered hypotheses until summer replication completes.
 - **Prediction board.** Public, timestamped, resolvable. URL: `https://johnmalpass.github.io/hunter-research/`
 - **Methodology brief (PDF, 2 pages).** Free, publicly downloadable, linked on the prediction board.
-- **Pre-registration manifest.** `preregistration.json`, SHA-256 locked at hash `f39d2f5ff6b3e695`, corpus frozen 2024-12-31, code hash locked 2026-04-19.
+- **Pre-registration manifest.** `preregistration.json`, SHA-256 locked at hash `f39d2f5ff6b3e695`, corpus frozen 2026-03-31, code hash locked 2026-04-19.
 
 ## Quick start
 

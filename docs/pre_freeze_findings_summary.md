@@ -2,7 +2,7 @@
 
 *Patterns the summer study will test, not confirmed findings. Two-page summary.*
 
-The HUNTER corpus produced several empirical observations during the pre-freeze development period (before the 2024-12-31 cutoff, under the earlier pipeline tier). Full details are in `docs/EMPIRICAL_FINDINGS.md`. Three are interesting enough to call out, and all three are held back as hypotheses for the summer 2026 study to replicate or refute.
+The HUNTER corpus produced several empirical observations during the pre-freeze development period (before the 2026-03-31 cutoff, under the earlier pipeline tier). Full details are in `docs/EMPIRICAL_FINDINGS.md`. Three are interesting enough to call out, and all three are held back as hypotheses for the summer 2026 study to replicate or refute.
 
 ## 1. Narrative strength negatively predicts kill survival (r = −0.49)
 
