@@ -24,6 +24,12 @@ Some patterns showed up in the pre-freeze corpus. A sharp asymmetry between mech
 
 This repository is the public release of a six-month private solo build (November 2025 – April 2026). The git history shows a single initial commit because the audit trail was never intended to live in git: it lives in the SHA-256-locked pre-registration manifest (`preregistration.json`, code hash `f39d2f5ff6b3e695`, locked 2026-04-19), the timestamped frozen corpus on Zenodo (DOI pending), and the public, timestamped prediction board. Anyone auditing a claim runs `python run.py preregister check` against the manifest; independent replication runs against the frozen Zenodo corpus and the locked code hash, not against the commit history.
 
+## Corpus reconciliation
+
+Two fact counts appear in this repo and they need to agree. **12,030** is the full ingested corpus, released on Zenodo as v1. **3,557** is the pre-registration-eligible subset: facts dated on or before the 2024-12-31 cutoff, with post-cutoff facts quarantined from the primary test. The subset is hashed and locked in `preregistration.json`.
+
+Pre-existing collisions in the database mix pre- and post-cutoff facts and are not used for the primary test. The summer study regenerates collisions from the frozen pre-cutoff subset only. Strata counts shown in `preregistration.json` as `strata_partial` (A:5, B:5, C:8, D:25) are from the pre-existing mixed collision set and will be recomputed when the summer run produces in-scope collisions; the manifest flags `current_sufficient: false` until the regenerated counts hit the ≥30-per-stratum power threshold.
+
 ## A note on the operator
 
 This is built and run by one person: John Malpass, second-year BSc Economics at University College Dublin. That's relevant context for how the work should be read. The repo is public on purpose. Priority of discovery is claimed at the moment of posting, and honest public critique is worth more than private reassurance. Prior-art pointers, design criticism, and replication attempts all welcome. Contact below.
