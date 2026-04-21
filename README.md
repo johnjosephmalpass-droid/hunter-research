@@ -12,13 +12,13 @@ Walk through any big financial firm and you'll see specialists who don't cross-r
 
 HUNTER is a Python program that reads across all of them at once. It pulls dated facts from 18 silos (patents, SEC filings, NAIC reserves, OSHA actions, CMBS delinquency, Federal Register rules, commodity inventories, analyst targets, academic preprints, pharma approvals, distressed credit, healthcare REITs, energy infrastructure, specialty real estate, government contracts, earnings transcripts, job listings, app rankings), breaks each fact into entities / implications / methodology fields / named causal arrows, looks for pairs that together imply something neither implies alone, runs each pair through a four-round kill gauntlet designed to destroy it, and posts survivors to a public prediction board with an asset, a direction, and a resolution date.
 
-It is also the measurement platform for a pre-registered 12-week empirical study of *compositional alpha* — cross-silo information asymmetries no single specialist captures — running out-of-sample from June 1 through August 31, 2026.
+It is also the measurement platform for a pre-registered 12-week empirical study of *compositional alpha* (cross-silo information asymmetries no single specialist captures), running out-of-sample from June 1 through August 31, 2026.
 
 ## Status
 
 **Early research.** The pipeline is built and runs. The corpus is frozen. The prediction board is live and empty on purpose: it fills from June 1 as summer hypotheses clear the upgraded three-tier pipeline (Opus 4.7 for the critical reasoning, Sonnet 4.5 for extraction, Haiku 4.5 for ingestion). Zero predictions have resolved as of launch. First resolutions hit the ledger mid-July. The 12-week summer study is the first real out-of-sample run.
 
-Some patterns showed up in the pre-freeze corpus — a sharp asymmetry between mechanism-focused and audience-focused kill success, a hub-and-spoke shape in the methodology graph around ARGUS Enterprise DCF cap-rate assumptions, a bimodal distribution of quality scores, a negative correlation between narrative strength and kill survival (r = −0.49), and nine closed Tarjan cycles. None of these are claimed as findings. They are held back as hypotheses the summer will test.
+Some patterns showed up in the pre-freeze corpus. A sharp asymmetry between mechanism-focused and audience-focused kill success, a hub-and-spoke shape in the methodology graph around ARGUS Enterprise DCF cap-rate assumptions, a bimodal distribution of quality scores, a negative correlation between narrative strength and kill survival (r = −0.49), and nine closed Tarjan cycles. None of these are claimed as findings. They are held back as hypotheses the summer will test.
 
 ## Provenance
 
@@ -26,16 +26,16 @@ This repository is the public release of a six-month private solo build (Novembe
 
 ## A note on the operator
 
-This is built and run by one person: John Malpass, second-year BSc Economics at University College Dublin. That's relevant context for how the work should be read. The repo is public on purpose — priority of discovery is claimed at the moment of posting, and honest public critique is worth more than private reassurance. Prior-art pointers, design criticism, and replication attempts all welcome. Contact below.
+This is built and run by one person: John Malpass, second-year BSc Economics at University College Dublin. That's relevant context for how the work should be read. The repo is public on purpose. Priority of discovery is claimed at the moment of posting, and honest public critique is worth more than private reassurance. Prior-art pointers, design criticism, and replication attempts all welcome. Contact below.
 
 ## Key artifacts
 
-- **Corpus (Zenodo, CC-BY-4.0)** — 12,030 facts across 18 silos, 77 countries, 30,967 normalised entity-index entries, 11,835 distinct entities, 6,670 model-field extractions, 474 cross-silo collisions, 171 directed causal edges with named transmission pathways, 52 multi-link chains, 1,570 detected anomalies, 61 formed hypotheses with completed adversarial review, and 1,155 theory-evidence records across 13 framework layers. DOI: *pending Zenodo reserve*.
-- **Methods paper (Paper 0, SSRN)** — Instrument, pipeline, the novel methodology triad, kill-phase design. *Submission pending April 2026.*
-- **Additional working papers** — drafts on the mechanism-assembly bottleneck, the formal compositional residual, and the cross-silo composition test ship through summer and autumn. Empirical claims are presented as pre-registered hypotheses until summer replication completes.
-- **Prediction board** — public, timestamped, resolvable. URL: `https://Johnmalpass.github.io/hunter-research/`
-- **Methodology brief (PDF, 2 pages)** — free, publicly downloadable, linked on the prediction board.
-- **Pre-registration manifest** — `preregistration.json`, SHA-256 locked at hash `f39d2f5ff6b3e695`, corpus frozen 2024-12-31, code hash locked 2026-04-19.
+- **Corpus (Zenodo, CC-BY-4.0)**. 12,030 facts across 18 silos, 77 countries, 30,967 normalised entity-index entries, 11,835 distinct entities, 6,670 model-field extractions, 474 cross-silo collisions, 171 directed causal edges with named transmission pathways, 52 multi-link chains, 1,570 detected anomalies, 61 formed hypotheses with completed adversarial review, and 1,155 theory-evidence records across 13 framework layers. DOI: *pending Zenodo reserve*.
+- **Methods paper (Paper 0, SSRN)**. Instrument, pipeline, the novel methodology triad, kill-phase design. *Submission pending April 2026.*
+- **Additional working papers**. Drafts on the mechanism-assembly bottleneck, the formal compositional residual, and the cross-silo composition test ship through summer and autumn. Empirical claims are presented as pre-registered hypotheses until summer replication completes.
+- **Prediction board**. Public, timestamped, resolvable. URL: `https://Johnmalpass.github.io/hunter-research/`
+- **Methodology brief (PDF, 2 pages)**. Free, publicly downloadable, linked on the prediction board.
+- **Pre-registration manifest**. `preregistration.json`, SHA-256 locked at hash `f39d2f5ff6b3e695`, corpus frozen 2024-12-31, code hash locked 2026-04-19.
 
 ## Quick start
 
@@ -46,7 +46,7 @@ python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 cp .env.example .env   # add your API keys
 
-# dashboard (no API required — reads the frozen corpus)
+# dashboard (no API required. Reads the frozen corpus)
 python run.py dashboard
 
 # one-screen state of the system (no API)
@@ -89,23 +89,23 @@ The seven collision strategies run in parallel per anomaly: implication matching
 
 ## Modules
 
-**Ingestion & extraction** — `hunter.py`, `prompts.py`.
+**Ingestion & extraction**. `hunter.py`, `prompts.py`.
 
-**Matching & collision** — `hunter.py` (CollisionCycle with seven parallel strategies).
+**Matching & collision**. `hunter.py` (CollisionCycle with seven parallel strategies).
 
-**Adversarial kill phase** — embedded in `hunter.py` with support from `formula_validator.py`, `kill_failure_mapper.py`, and the financial-mechanics check.
+**Adversarial kill phase**. Embedded in `hunter.py` with support from `formula_validator.py`, `kill_failure_mapper.py`, and the financial-mechanics check.
 
-**Hypotheses, scoring, ledger** — `hunter.py`, `prediction_board.py`, `portfolio.py`, `portfolio_feedback.py`.
+**Hypotheses, scoring, ledger**. `hunter.py`, `prediction_board.py`, `portfolio.py`, `portfolio_feedback.py`.
 
-**Analysis & graph** — `cycle_detector.py` (Tarjan SCC), `cycle_chain_detector.py`, `chain_to_causal_edges.py`, `narrative_detector.py`, `obscurity_filter.py`, `halflife_estimator.py`, `reinforcement_measurer.py`, `phase_transition_detector.py`, `adversarial_residual_classifier.py`, `thesis_dedup.py`, `chain_decay_fitter.py`, `residual_tam.py`.
+**Analysis & graph**. `cycle_detector.py` (Tarjan SCC), `cycle_chain_detector.py`, `chain_to_causal_edges.py`, `narrative_detector.py`, `obscurity_filter.py`, `halflife_estimator.py`, `reinforcement_measurer.py`, `phase_transition_detector.py`, `adversarial_residual_classifier.py`, `thesis_dedup.py`, `chain_decay_fitter.py`, `residual_tam.py`.
 
-**Self-improvement** — `adversarial_self_test.py`, `self_improve.py`, `moat_tracker.py`, `meta_hunter.py`, `inverse_hunter.py`, `frontier_hypotheses.py`, `belief_decomposer.py`.
+**Self-improvement**. `adversarial_self_test.py`, `self_improve.py`, `moat_tracker.py`, `meta_hunter.py`, `inverse_hunter.py`, `frontier_hypotheses.py`, `belief_decomposer.py`.
 
-**Study infrastructure** — `preregister.py`, `orchestrator.py`, `calibration.py`, `theory_layer.py`, `theory.py`, `theory_canon_v2.py`.
+**Study infrastructure**. `preregister.py`, `orchestrator.py`, `calibration.py`, `theory_layer.py`, `theory.py`, `theory_canon_v2.py`.
 
-**Dashboards** — `master_dashboard.py` (the unified five-tab Streamlit dashboard), `hunter_dashboard.py` and `theory_dashboard.py` (legacy), `public_dashboard.py`.
+**Dashboards**. `master_dashboard.py` (the unified five-tab Streamlit dashboard), `hunter_dashboard.py` and `theory_dashboard.py` (legacy), `public_dashboard.py`.
 
-**Reports and artifacts** — `generate_report.py`, `enrich_thesis.py`, `build_story_pdf.py`, `targeting.py`.
+**Reports and artifacts**. `generate_report.py`, `enrich_thesis.py`, `build_story_pdf.py`, `targeting.py`.
 
 About 32,000 lines of Python across 60+ modules, 43 DB tables, 26 LLM prompts.
 
@@ -115,17 +115,17 @@ A 12-week out-of-sample study runs June 1 – August 31, 2026 on the frozen corp
 
 **Primary test.** Median realised alpha over SPY total return, ordered across four strata by how many distinct silos the hypothesis combines: A (1) ≤ B (2) ≤ C (3) ≤ D (≥4), with D − A > 0 at p < 0.05 under a 10,000-resample paired bootstrap. Strata are fixed in `config.py`.
 
-**Prior contradictory evidence — and why the study still runs.** An earlier retrospective pilot (the "v3 Golden" validation run, `V3_GOLDEN_*` constants in `config.py`) produced Stratum D < Stratum B, directly contradicting H1. That pilot ran with `RETROSPECTIVE_DISABLE_WEB_SEARCH = True` — i.e. the kill phase could not check causal mechanisms against live web evidence, which is the specific channel through which cross-silo advantages are supposed to manifest. The summer 2026 study runs prospectively with web-searched mechanism kills, which is the regime H1 is actually about. If the summer study also produces D ≤ B or violates monotonicity, the manifest's decision rule kicks in: reject H1, ship the null paper, and treat the framework as needing structural revision (not recalibration). That outcome is explicitly on the table. See `THEORY_CANON.md` §2 claim C4 for the full epistemic state.
+**Prior contradictory evidence. And why the study still runs.** An earlier retrospective pilot (the "v3 Golden" validation run, `V3_GOLDEN_*` constants in `config.py`) produced Stratum D < Stratum B, directly contradicting H1. That pilot ran with `RETROSPECTIVE_DISABLE_WEB_SEARCH = True`. I.e. the kill phase could not check causal mechanisms against live web evidence, which is the specific channel through which cross-silo advantages are supposed to manifest. The summer 2026 study runs prospectively with web-searched mechanism kills, which is the regime H1 is actually about. If the summer study also produces D ≤ B or violates monotonicity, the manifest's decision rule kicks in: reject H1, ship the null paper, and treat the framework as needing structural revision (not recalibration). That outcome is explicitly on the table. See `THEORY_CANON.md` §2 claim C4 for the full epistemic state.
 
 **Secondary tests.**
-- **H2** — Detected cycles (reinforcement ≥ 0.5) persist uncorrected in the market for ≥ 14 days in ≥ 2 of the 9 currently detected cycles.
-- **H3** — Cross-silo collisions (domain distance ≥ 0.60) score ≥ 10 points higher than within-silo (< 0.30) on average.
-- **H4** — Chain-depth-3 hypotheses outperform chain-depth-1 at Cohen's d ≥ 0.3.
+- **H2**. Detected cycles (reinforcement ≥ 0.5) persist uncorrected in the market for ≥ 14 days in ≥ 2 of the 9 currently detected cycles.
+- **H3**. Cross-silo collisions (domain distance ≥ 0.60) score ≥ 10 points higher than within-silo (< 0.30) on average.
+- **H4**. Chain-depth-3 hypotheses outperform chain-depth-1 at Cohen's d ≥ 0.3.
 
 **Null baselines (committed in advance).**
-- **B1 random-pair** — facts drawn from distinct source types at random.
-- **B2 within-silo** — same-source-type pairing forced.
-- **B3 shuffled-label** — source-type labels shuffled before pipeline execution.
+- **B1 random-pair**. Facts drawn from distinct source types at random.
+- **B2 within-silo**. Same-source-type pairing forced.
+- **B3 shuffled-label**. Source-type labels shuffled before pipeline execution.
 
 **Decision rules** (fixed in `preregistration.json`):
 - Primary wins → accept the compositional alpha hypothesis; empirical paper ships.
@@ -134,7 +134,7 @@ A 12-week out-of-sample study runs June 1 – August 31, 2026 on the frozen corp
 
 Drift during the study is auto-detected by `python run.py preregister check` and reported in the final paper.
 
-Pre-freeze patterns — the mechanism-vs-audience kill asymmetry, the hub-and-spoke methodology graph around ARGUS Enterprise DCF assumptions, the bimodal diamond-score distribution, the narrative-survival correlation (r = −0.49), the nine detected Tarjan cycles — are secondary hypotheses for the summer to test. Not findings.
+Pre-freeze patterns. The mechanism-vs-audience kill asymmetry, the hub-and-spoke methodology graph around ARGUS Enterprise DCF assumptions, the bimodal diamond-score distribution, the narrative-survival correlation (r = −0.49), the nine detected Tarjan cycles. Are secondary hypotheses for the summer to test. Not findings.
 
 ## What this is not
 
@@ -158,6 +158,6 @@ Instrument / methodology:
 
 ## Contact
 
-Honest critique, prior-art pointers, and replication attempts welcome. No cold pitches, please — this is a research project.
+Honest critique, prior-art pointers, and replication attempts welcome. No cold pitches, please. This is a research project.
 
 John Malpass · University College Dublin · email on the Zenodo record and Substack About page.
