@@ -34,23 +34,26 @@ The question I had that afternoon was small. I wanted to check one of my own pre
 
 Months earlier, when I had been designing the scoring system, I'd added a measurement called *narrative strength*. Every hypothesis got a score from zero to one on whether it read like a clean story — protagonist, catalyst, complication, resolution — or like a tangle of technical notes. I had added this because I had a theory. The hypotheses with clean stories ought to survive the kill rounds longer. A good narrative is a grip. It's what lets a claim stay memorable under pressure. I expected a positive correlation between narrative strength and kill survival. Maybe a strong one.
 
-I'd only run the narrative scorer on the sixty-one most recent hypotheses — the ones from the current upgraded-pipeline tier — because scoring is expensive and I wanted to cut my teeth on the smaller tier before spending the compute on the full 324. So the answer I was about to get would be about that 61, and would need to be replicated across the rest later. Fair enough. It's a launch, not a final paper.
+I opened a new terminal. Wrote a small script. Pulled narrative scores and survival outcomes into two arrays. Asked Python for the Pearson correlation between them.
 
-So I opened a new terminal. Wrote a small script. Pulled narrative scores and survival outcomes into two arrays. Asked Python for the Pearson correlation between them.
-
-**r = −0.49.**
+On the sixty-one most recent hypotheses — the ones from the current upgraded pipeline, the ones with mechanism-kill turned on — I got **r = −0.49**.
 
 I ran it again. Same number.
 
-Strong-narrative hypotheses had died *more* often under the kill rounds. Not less. The ones that scored highest for storytelling — clean arc, clear villain, memorable catalyst — survived zero times out of three attempts. The ones that scored lowest, the awkward ones that take ten pages to explain and that you'd never tell at a dinner party, survived fourteen times out of twenty-four.
+Strong-narrative hypotheses had died *more* often under the kill rounds. Not less. The ones that scored highest for storytelling — clean arc, clear villain, memorable catalyst — died almost every time. The ones that scored lowest, the awkward ones that take ten pages to explain and that you'd never tell at a dinner party, survived most of the time.
+
+So I ran it on the full 324. All of them. Both pipeline tiers. The combined correlation came back at **r = −0.27**. Weaker than −0.49, same sign. Still statistically serious — a permutation test over 10,000 shuffles returns *p* < 0.00001.
 
 I stared at the screen for a minute. Made another tea. Sat down to figure out what had just happened.
 
-A serious reader should pause on that chart. The 0% bar sits on three hypotheses — small enough that if one of those three had gone the other way, the picture would read differently. The workhorse of the correlation is actually the drop from 58% to 33% between the low and medium narrative bins, where n = 24 and n = 34 respectively, and that's the part that would survive scrutiny even if the high-narrative tail were removed entirely. So the headline *"clean stories die 0% of the time"* is a dramatisation of a real signal; the real signal is that the *trend* runs the wrong way across every bin, not that the high-narrative bin is a cliff. I want to say that out loud because it is the kind of thing I would catch in somebody else's chart within about four seconds, and I'd rather catch it first in my own.
+A serious reader should pause on that chart. The high-narrative bin is only seven hypotheses. If two of those seven had gone the other way, the headline would soften considerably. The workhorse of the correlation is really the drop from 42.6% to 19.9% across the two larger bins, n = 176 and n = 141, and that's the part that would survive even if the high-narrative tail were removed entirely.
 
-The sign is still flipped from what I predicted. That's what made me sit down and think.
+There is also a second fact on the chart worth naming. The −0.49 number I got first was measured only on the upgraded pipeline — the tier where each hypothesis has to name the specific filing, database, or workflow through which the output of one silo becomes an input to another. On the older pipeline, which didn't apply that test, the same correlation came in at only −0.23, about half as strong. That isn't noise. It tells me something about *which* kill round is doing the work. I'll come back to it in a moment.
 
-It took three days. When I understood it, it reframed the whole project.
+So: the sign is flipped from what I predicted. The magnitude is softer on the pooled sample than on the upgraded-pipeline subset alone. Both of those are true and both of them belong in the same paragraph.
+
+It took me three days to sit with the number. When I understood it, it reframed the whole project.
+
 
 ---
 
@@ -88,7 +91,9 @@ Weak narrative, in other words, is a *proxy for structural opacity*. It's eviden
 
 If a story hasn't been written, there is nothing for the market to read. Nothing to drive correction. The mispricing stays exactly where HUNTER found it.
 
-I would not have reached this conclusion by sitting in a chair and thinking. I reached it because I had built an instrument that disagreed with me and logged the disagreement. The instrument made me sharper than I was when I started. That, I think, is what instruments are for.
+This is also where the pipeline-tier split becomes interesting rather than embarrassing. The older pipeline's kill rounds asked whether the claim was factually wrong, whether a competitor had already published it, whether a structural barrier made it un-tradeable. The upgraded pipeline asks all of that and then adds a fourth round: for each causal arrow you're claiming, name the specific filing, database, or workflow through which the output of system A enters the input of system B. If you can't name the pathway, the arrow is broken and the whole hypothesis fails. That's the round with the web search. That's the round that penalises clean stories. And that's precisely where the correlation roughly doubles from −0.23 to −0.49. The mechanism-kill round is the specific channel through which narrative clarity becomes a liability, because clean narratives produce findable counter-evidence at named institutions and awkward ones don't.
+
+I would not have reached this conclusion by sitting in a chair and thinking. I reached it because I had built an instrument that disagreed with me, logged the disagreement, and then — when I extended the analysis to a larger sample — told me *which part of itself* was doing the disagreeing. The instrument made me sharper than I was when I started. That, I think, is what instruments are for.
 
 ---
 
