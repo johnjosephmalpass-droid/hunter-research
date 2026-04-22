@@ -25,7 +25,7 @@ None of these proves independence; together they bound how much of the signal is
 
 ## L5. v3 Golden / Stratum B > D inversion
 
-An earlier retrospective pilot (the `V3_GOLDEN_*` run in `config.py`) produced Stratum D < Stratum B, directly contradicting the pre-registered primary hypothesis. That pilot ran with `RETROSPECTIVE_DISABLE_WEB_SEARCH = True` — the kill phase could not check mechanisms against live web evidence, which is the specific channel H1 is about. The summer 2026 study runs prospectively with web-searched kill rounds. If the summer also produces D ≤ B or violates monotonicity, the manifest's decision rule rejects H1 and the null paper ships. The framework then needs structural revision, not recalibration.
+An earlier retrospective pilot (the `V3_GOLDEN_*` run in `config.py`) produced Stratum D < Stratum B, directly contradicting the pre-registered primary hypothesis. That pilot ran with `RETROSPECTIVE_DISABLE_WEB_SEARCH = True`, the kill phase could not check mechanisms against live web evidence, which is the specific channel H1 is about. The summer 2026 study runs prospectively with web-searched kill rounds. If the summer also produces D ≤ B or violates monotonicity, the manifest's decision rule rejects H1 and the null paper ships. The framework then needs structural revision, not recalibration.
 
 ## L6. Pipeline tier change
 
@@ -41,7 +41,7 @@ v1 facts concentrate in the 2024 calendar year of active ingestion. Temporal dyn
 
 ## L9. Formal theoretical claims await senior collaboration
 
-The formal proofs sketched in the working papers (particularly the non-zero compositional residual bound) are informal. Rigorous measure-theoretic treatment is pending collaboration with a formal theorist. The operator is a second-year undergraduate; the papers are framed as conjectures inviting collaboration, not finished results.
+The formal proofs sketched in the working papers (particularly the non-zero compositional residual bound) are informal. Rigorous measure-theoretic treatment is pending collaboration with a formal theorist. The papers are framed as conjectures inviting collaboration, not finished results.
 
 ## L10. Zero track record at launch
 

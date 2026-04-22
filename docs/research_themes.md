@@ -2,7 +2,7 @@
 
 *Structural themes only. No tickers, no entry prices, no trade directions. Every theme below is a pre-freeze pattern that the summer 2026 pre-registered study is the proper test of, not a confirmed finding. Do not treat this as investment advice or a research note.*
 
-HUNTER produced 324 hypotheses across two pipeline iterations in the pre-freeze window (March 28 – April 3, 2026 for the archive; April 1 – 4 for the main table). Of those, 13 scored diamond ≥ 75 on the internal adversarial review. Those top hypotheses cluster into a handful of structural themes that are worth naming here — not because they are empirically validated (they aren't, yet), but because naming the themes illustrates the kind of cross-silo composition the instrument is built to surface.
+HUNTER produced 324 hypotheses across two pipeline iterations in the pre-freeze window (March 28 – April 3, 2026 for the archive; April 1 – 4 for the main table). Of those, 13 scored diamond ≥ 75 on the internal adversarial review. Those top hypotheses cluster into a handful of structural themes that are worth naming here, not because they are empirically validated (they aren't, yet), but because naming the themes illustrates the kind of cross-silo composition the instrument is built to surface.
 
 ---
 
@@ -34,7 +34,7 @@ Pension liability valuations and insurance statutory filings use AA corporate yi
 
 Regional forward power curves (PJM, ERCOT, CAISO adjacent) are priced off assumptions about which generation source is economically marginal at different load levels. When oil-fired peaker economics change (crude price threshold crossings, environmental compliance cost shifts, grid-battery build-out), the marginal-generator assumption breaks, but the forward curve carries the stale assumption until a shock reveals it.
 
-**Why HUNTER keeps surfacing this.** Oil-price dynamics live in one silo (commodity markets); grid-planner forward curves live in another (ISO publications). The bridge — "at what oil price does the peaker no longer clear" — is a calculation no single audience performs as a matter of course.
+**Why HUNTER keeps surfacing this.** Oil-price dynamics live in one silo (commodity markets); grid-planner forward curves live in another (ISO publications). The bridge, "at what oil price does the peaker no longer clear", is a calculation no single audience performs as a matter of course.
 
 ## 6. Hotel-CMBS default-probability models with outdated refinancing-spread assumptions
 
@@ -60,7 +60,7 @@ European pharmaceutical DCF models embedded in equity research use demographic a
 
 Themes, not findings. No statement above is empirically validated. Each cluster corresponds to one or more pre-freeze hypotheses that scored diamond ≥ 75 under the earlier pipeline, but scoring ≥ 75 under the pre-freeze adversarial reviewer is not the same as having survived a pre-registered out-of-sample test. The summer study is the proper test; until it reports, treat everything here as suggestive, not confirmed.
 
-Compositional, not additive. What all eight themes have in common is that they require reading two or more professional silos simultaneously. Each theme could be dismissed by a specialist in any single one of its silos as "already priced in within my domain" — and each of those specialists would be correct about their own silo. The claim is that when you stack the silos, the joint implication is not priced in by anyone because no single specialist holds all the silos.
+Compositional, not additive. What all eight themes have in common is that they require reading two or more professional silos simultaneously. Each theme could be dismissed by a specialist in any single one of its silos as "already priced in within my domain", and each of those specialists would be correct about their own silo. The claim is that when you stack the silos, the joint implication is not priced in by anyone because no single specialist holds all the silos.
 
 Structural, not temporal. These are mechanisms, not trades. A mechanism like "statutory filing dates create snapshot-to-consequence timing mismatches" can recur across many specific filings. Pointing at a mechanism is not the same as identifying a specific asset to buy or sell; the specific assets sit in the corpus but are not surfaced here.
 

@@ -1,4 +1,4 @@
-# HUNTER — The Theory Canon
+# HUNTER: The Theory Canon
 
 The canonical statement of what the framework claims, what it does not claim,
 the formal definitions that anchor the vocabulary, and the testable predictions
@@ -165,7 +165,7 @@ These statements appeared in earlier drafts. They are withdrawn.
   "mechanism-absent residuals" instead. No formal incompleteness
   theorem applies to market structure without significant additional
   assumptions that were never stated.
-- **"Autopoietic verification — finding residual where predicted IS evidence."**
+- **"Autopoietic verification, finding residual where predicted IS evidence."**
   This is circular. A framework cannot be validated purely by finding
   the phenomena it predicts without an independent control. Layer 12
   is demoted from "direct evidence" to "consistency check."
@@ -182,7 +182,7 @@ These statements appeared in earlier drafts. They are withdrawn.
   measure cross-silo). But the $2.8T specific number came from a
   formula whose computed tables returned zeros. Removed as a specific
   number; retained as "of the same order as or larger than all known
-  within-silo inefficiencies combined" — which is the actual argument.
+  within-silo inefficiencies combined", which is the actual argument.
 
 ## 4. The formal collision-scoring function
 
@@ -255,14 +255,14 @@ Three planned papers, each answering one question. All three use the
 vocabulary from §1; all three cite the same framework; together they
 establish the field.
 
-### Paper 1 — Measurement (summer 2026)
+### Paper 1, Measurement (summer 2026)
 "Compositional Alpha: Empirical Evidence from Cross-Silo Information Collisions"
 
-### Paper 2 — Mechanism (2027)
+### Paper 2, Mechanism (2027)
 "The Structure of Epistemic Cycles: Detection, Persistence, and Taxonomy
 in Financial Markets"
 
-### Paper 3 — Implication (2028)
+### Paper 3, Implication (2028)
 "Why Markets are Complete for Additive Signals and Incomplete for
 Compositional Ones: Theory and Policy Implications"
 
@@ -293,5 +293,5 @@ You do this with compositional alpha.
 
 This is what a paper draft based on HUNTER should look like. If you
 write that paper and post it to SSRN this month, you have
-claimed priority on a genuinely novel body of work — honestly,
+claimed priority on a genuinely novel body of work, honestly,
 defensibly, with the overreach cut out.

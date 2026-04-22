@@ -1,4 +1,4 @@
-# HUNTER — Empirical Findings Report
+# HUNTER: Empirical Findings Report
 
 Generated 2026-04-18 by running the seven new analyser modules against the
 existing 12,030-fact corpus, 474 collisions, 61 hypotheses, and 20 surviving theses.
@@ -41,7 +41,7 @@ Regression against actual collision counts suggests:
 | residual | 400 | **+34.61** |
 
 **Silo count and residual density matter much more than current weights imply.**
-The correction coefficient may have the wrong *sign* — domains with higher
+The correction coefficient may have the wrong *sign*, domains with higher
 correction rates seem to produce *more* collisions, not fewer. That's
 counter-intuitive and needs investigation.
 
@@ -56,7 +56,7 @@ counter-intuitive and needs investigation.
 | earnings × pharmaceutical | 32.53 | **102** |
 | earnings × regulation | 30.43 | **99** |
 
-These are all CRE / regulatory / pharma combinations — exactly where HUNTER
+These are all CRE / regulatory / pharma combinations, exactly where HUNTER
 has produced its top-scoring findings. The formula is blind to the very places
 HUNTER finds diamonds.
 
@@ -86,11 +86,11 @@ improvement** to the framework.
 
 ### What this means
 
-Every domain's **reinforcement rate is near 1.0** — facts in a source type
+Every domain's **reinforcement rate is near 1.0**, facts in a source type
 almost always echo earlier facts in the same source type. The echo-chamber
 effect is **much stronger than the framework assumed**.
 
-Every domain's **correction rate is near 0** — explicit corrections,
+Every domain's **correction rate is near 0**, explicit corrections,
 retractions, and revisions are rare. The public correction-loop the
 framework assumes doesn't really run at the source-type level.
 
@@ -134,7 +134,7 @@ Two interpretations:
 
 2. **Our correction-detection is too strict.** We require both entity
    overlap AND explicit correction vocabulary (retracted, revised,
-   contradicted, etc.). Many real corrections are implicit —
+   contradicted, etc.). Many real corrections are implicit.
    market prices move, analysts quietly change models, no one publishes
    a retraction. So the measured correction rate is a *lower bound*.
 
@@ -190,7 +190,7 @@ is a real empirical artefact, not theoretical.
 
 ---
 
-## 5. Narrative structure & kill-survival — the surprise
+## 5. Narrative structure & kill-survival, the surprise
 
 **Answer: The framework had the direction wrong.**
 
@@ -203,21 +203,21 @@ is a real empirical artefact, not theoretical.
 | Survival uplift from narrative | **−58%** |
 
 ### What this means
-The framework predicted that **compelling narrative reinforces errors** —
+The framework predicted that **compelling narrative reinforces errors**.
 embedded stories are harder to dislodge. Our data shows the **opposite**:
 
 Strong-narrative hypotheses are the ones kill-rounds successfully destroy.
-Survivors tend to be raw, structural, hard to articulate — they don't
+Survivors tend to be raw, structural, hard to articulate, they don't
 *have* a clean narrative yet because nobody's written one.
 
 ### Reconciliation with framework
 
-This is actually consistent with Layer 10 (structural incompleteness) —
+This is actually consistent with Layer 10 (structural incompleteness).
 if an error is structurally unreachable by correction mechanisms, nobody
 has written the narrative for correcting it either. The absence of narrative
 is evidence of absence of correction infrastructure.
 
-Meanwhile, strong-narrative hypotheses are obvious-under-another-label —
+Meanwhile, strong-narrative hypotheses are obvious-under-another-label.
 the narrative was written because the error is already widely visible,
 which means an adversarial kill round can *find* the counter-evidence.
 
@@ -265,12 +265,12 @@ which means an adversarial kill round can *find* the counter-evidence.
 | distressed × regulation | 7 | 70.4% | 42.9% | 0.80 |
 
 **Bankruptcy × regulation** is the top structural-incompleteness candidate.
-Makes sense — bankruptcy court filings + regulatory rule changes is exactly
+Makes sense, bankruptcy court filings + regulatory rule changes is exactly
 the kind of cross-silo information where nobody in either domain reads the
 other.
 
 ### Action
-For the summer study, use this ranked table to *target* collision generation —
+For the summer study, use this ranked table to *target* collision generation.
 these pairs are most likely to produce unkilled, unreachable structural edges.
 
 ---
@@ -288,7 +288,7 @@ these pairs are most likely to produce unkilled, unreachable structural edges.
 
 Most domains show flat or negative z-scores (corrections keeping pace with
 accumulation). **job_listing and earnings** are the two domains where
-residual is accumulating faster than average — flagged for attention.
+residual is accumulating faster than average, flagged for attention.
 
 ### Action
 Will become more useful after 6–12 months of history. The framework
@@ -319,13 +319,13 @@ that explicitly asks "does this error have an active maintainer?".
 
 ---
 
-## Meta-findings — what the data says about the framework
+## Meta-findings, what the data says about the framework
 
 ### Supported
 - Cross-domain cycles **exist** and **are detectable** (9 found).
 - Residual **persists** longer than correction dynamics predict. Framework
   direction correct; constants miscalibrated.
-- Kill rounds on competitor/barrier/market_check **systematically fail** —
+- Kill rounds on competitor/barrier/market_check **systematically fail**.
   operationalised evidence of structural-incompleteness candidates.
 
 ### Challenged
@@ -351,7 +351,7 @@ These findings update the pre-registered study:
 2. **New secondary endpoint**: does refitted collision formula (regression
    coefficients from §1) have r ≥ 0.4 on held-out data?
 3. **Targeted collision strategy**: oversample bankruptcy × regulation,
-   cre_credit × distressed, pharmaceutical × regulation — the empirically
+   cre_credit × distressed, pharmaceutical × regulation, the empirically
    productive pairs.
 4. **Scoring update**: add a `narrative_penalty` component. High narrative
    reduces score by 3–5 points. Log and measure effect on adjusted win rate.

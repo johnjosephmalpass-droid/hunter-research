@@ -214,9 +214,9 @@ story.append(h1("The Bet"))
 story.append(sp(4))
 
 story.append(p(
-    "A 21-year-old economics student made a bet: that the most valuable insights in finance "
-    "don't come from being smarter within a domain, but from reading across domains that never "
-    "talk to each other."
+    "An economics student at University College Dublin made a bet: that the most valuable insights "
+    "in finance don't come from being smarter within a domain, but from reading across domains that "
+    "never talk to each other."
 ))
 
 story.append(p(

@@ -228,8 +228,8 @@ def run_overseer():
     report_text = _call_sonnet(
         system_prompt="""You are HUNTER Sr, the system's senior performance analyst. You have deep knowledge of HUNTER's architecture and history.
 
-CRITICAL CONTEXT — what you must know:
-- HUNTER is a solo-operator research instrument built by an undergraduate
+CRITICAL CONTEXT, what you must know:
+- HUNTER is a solo-operator research instrument
 - The hypothesis database has been cleared multiple times during development/debugging; the archived count represents ALL historical output, not just current
 - The system went through major evolution: single-domain clustering -> diverse cross-domain output
 - Key architectural milestones: search-grounded gate (replaced LLM-judging-LLM), five-element model-vulnerability extraction, disruption-assumption validation, transitive chaining, feedback loop, domain concentration ceiling

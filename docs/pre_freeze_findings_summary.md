@@ -12,7 +12,7 @@ The HUNTER corpus produced several empirical observations during the pre-freeze 
 
 **What the pre-freeze data showed.** The opposite. Hypotheses with high narrative strength (score ≥ 0.6) died in the kill rounds every time (0% survival, n = 3). Hypotheses with low narrative strength (< 0.4) survived 58% of the time (n = 24). Pearson r = −0.49 between narrative strength and survival, r = −0.52 against diamond score.
 
-**Reading.** If this replicates, the claim is: a cross-silo hypothesis that already has a clean story has already been articulated somewhere, so a web-searched kill round can find the counter-evidence. The structurally uncorrectable core survives precisely because nobody has written the story yet — there is no audience, no correction infrastructure, no search terms that return disconfirming papers. Weak narrative becomes a proxy for genuine structural opacity.
+**Reading.** If this replicates, the claim is: a cross-silo hypothesis that already has a clean story has already been articulated somewhere, so a web-searched kill round can find the counter-evidence. The structurally uncorrectable core survives precisely because nobody has written the story yet, there is no audience, no correction infrastructure, no search terms that return disconfirming papers. Weak narrative becomes a proxy for genuine structural opacity.
 
 **What summer tests.** Whether the sign and magnitude hold on the out-of-sample run under the upgraded pipeline. Pre-registered threshold: r ≤ −0.3 at p < 0.05 counts as replication.
 

@@ -12,7 +12,7 @@ Walk through any big financial firm and you'll see specialists who don't cross-r
 
 HUNTER is a Python program that reads across all of them at once. It pulls dated facts from 18 silos (patents, SEC filings, NAIC reserves, OSHA actions, CMBS delinquency, Federal Register rules, commodity inventories, analyst targets, academic preprints, pharma approvals, distressed credit, healthcare REITs, energy infrastructure, specialty real estate, government contracts, earnings transcripts, job listings, app rankings), breaks each fact into entities / implications / methodology fields / named causal arrows, looks for pairs that together imply something neither implies alone, runs each pair through a four-round kill gauntlet designed to destroy it, and posts survivors to a public prediction board with an asset, a direction, and a resolution date.
 
-It is also the measurement platform for a pre-registered 12-week empirical study of *compositional alpha* — cross-silo information asymmetries no single specialist captures — running out-of-sample from June 1 through August 31, 2026.
+It is also the measurement platform for a pre-registered 12-week empirical study of *compositional alpha*, cross-silo information asymmetries no single specialist captures, running out-of-sample from June 1 through August 31, 2026.
 
 *Compositional alpha* is return that exists only at the join of two or more silos and disappears if you decompose the thesis back into its single-silo components. HUNTER's job is to find it, adversarially kill it when it's false, and publicly log the survivors.
 
@@ -24,7 +24,7 @@ Some patterns showed up in the pre-freeze corpus. A hub-and-spoke shape in the m
 
 ## Theoretical framework at a glance
 
-The framework is a ten-layer theory of compositional information asymmetry. The first seven layers extend existing literatures (Shannon rate-distortion, Hong–Stein attention, Arrow–Debreu completeness) into the compositional regime. The last three — **epistemic cycles**, **the cycle hierarchy**, and **fractal incompleteness** — are the framework's original contributions.
+The framework is a ten-layer theory of compositional information asymmetry. The first seven layers extend existing literatures (Shannon rate-distortion, Hong–Stein attention, Arrow–Debreu completeness) into the compositional regime. The last three, **epistemic cycles**, **the cycle hierarchy**, and **fractal incompleteness**, are the framework's original contributions.
 
 | # | Layer | Core claim | Pre-freeze status |
 |---|---|---|---|
@@ -39,7 +39,7 @@ The framework is a ten-layer theory of compositional information asymmetry. The 
 | 9 | The Cycle Hierarchy ★ | Higher-dimensional topology (H₀ → H₁ → H₂ → Hₙ) | 2 of 9 taxonomy types observed; rest theoretical |
 | 10 | Fractal Incompleteness ★ | Self-similar, computationally intractable structure | Structural claim from combinatorial growth |
 
-★ original contribution. For the complete layer-by-layer argument including the **three walls** that prevent market completion (Verification, Regeneration, Self-Reference), see `docs/HUNTER_THEORY.md`. For every quantitative prediction tested against the frozen corpus — three supported, two refuted, one mixed — see `docs/MATH_VERIFICATION.md`.
+★ original contribution. For the complete layer-by-layer argument including the **three walls** that prevent market completion (Verification, Regeneration, Self-Reference), see `docs/HUNTER_THEORY.md`. For every quantitative prediction tested against the frozen corpus, three supported, two refuted, one mixed, see `docs/MATH_VERIFICATION.md`.
 
 ## Provenance
 
@@ -51,12 +51,12 @@ Two numbers appear in this repository and they measure different things. **Publi
 
 ## A note on the operator
 
-This is built and run by one person: John Malpass, second-year BSc Economics at University College Dublin. That's relevant context for how the work should be read. The repo is public on purpose: priority of discovery is claimed at the moment of posting, and honest public critique is worth more than private reassurance. Prior-art pointers, design criticism, and replication attempts all welcome. Contact below.
+This is built and run by one person: John Malpass, at University College Dublin. The repo is public on purpose: priority of discovery is claimed at the moment of posting, and honest public critique is worth more than private reassurance. Prior-art pointers, design criticism, and replication attempts all welcome. Contact below.
 
 ## Key artifacts
 
 - **Corpus (Zenodo, CC-BY-4.0).** 12,030 facts across 18 silos, 77 countries, 30,967 normalised entity-index entries, 11,835 distinct entities, 6,670 model-field extractions, 1,570 detected anomalies, 606 tracked expirations (dated future catalysts), 474 cross-silo collisions, 113 held collisions, 52 multi-link chains, 171 directed causal edges with named transmission pathways, 20 differential-edge records, 12 knowledge-graph nodes, 9 Tarjan cycles, 138 kill-failure topology pairs, 423 negative-inference gap detections, 324 hypotheses with completed adversarial review across two pipeline iterations (263 in `hypotheses_archive` from the earlier run, March 28 – April 3, 2026; 61 in `hypotheses` from the later adversarial-review-upgrade run, April 1–4, 2026), 16 deep-dive expansions on top findings, 45 `findings` at diamond ≥ 65, 61 narrative scores, 61 residual classifications, 18 phase-transition signals, and 1,155 theory-evidence records across 13 framework layers. See `docs/DATA_OVERVIEW.md` for the complete table-by-table catalogue. DOI: [10.5281/zenodo.19667567](https://doi.org/10.5281/zenodo.19667567).
-- **Diamond theses catalogue.** `docs/diamond_theses.md` — eighteen pre-freeze diamond-tier hypotheses, grouped into three tiers by adversarial-review score, every one resolvable to a specific row in the Zenodo corpus. Candidates, not findings; the summer tests them.
+- **Diamond theses catalogue.** `docs/diamond_theses.md`, eighteen pre-freeze diamond-tier hypotheses, grouped into three tiers by adversarial-review score, every one resolvable to a specific row in the Zenodo corpus. Candidates, not findings; the summer tests them.
 - **Methods paper (Paper 0, SSRN).** Instrument, pipeline, the novel methodology triad, kill-phase design. Submission pending April 2026.
 - **Additional working papers.** Drafts on the mechanism-assembly bottleneck, the formal compositional residual, and the cross-silo composition test ship through summer and autumn. Empirical claims are presented as pre-registered hypotheses until summer replication completes.
 - **Prediction board.** Public, timestamped, resolvable. URL: `https://johnmalpass.github.io/hunter-research/`
@@ -109,9 +109,9 @@ The seven collision strategies run in parallel per anomaly: implication matching
 
 ## Causal topology
 
-![HUNTER causal graph — hub-and-spoke around ARGUS Enterprise DCF](docs/img/causal_graph.png)
+![HUNTER causal graph, hub-and-spoke around ARGUS Enterprise DCF](docs/img/causal_graph.png)
 
-The pre-freeze methodology graph has **203 nodes, 171 directed edges, a 5-unit gap at degrees 4–8, and a single degree-9 outlier** — ARGUS Enterprise DCF cap-rate assumptions. That's the hub-and-spoke signature the framework's Layer 2 predicts, and it is what a scale-free power law would *not* produce. The concentration is substantively meaningful: a regulator or software vendor that updated ARGUS's default cap-rate assumption would propagate through nine distinct causal pathways simultaneously, each terminating in a different professional silo. See `docs/MATH_VERIFICATION.md` Test 4 for the full degree-distribution analysis and the falsification against scale-free.
+The pre-freeze methodology graph has **203 nodes, 171 directed edges, a 5-unit gap at degrees 4–8, and a single degree-9 outlier**, ARGUS Enterprise DCF cap-rate assumptions. That's the hub-and-spoke signature the framework's Layer 2 predicts, and it is what a scale-free power law would *not* produce. The concentration is substantively meaningful: a regulator or software vendor that updated ARGUS's default cap-rate assumption would propagate through nine distinct causal pathways simultaneously, each terminating in a different professional silo. See `docs/MATH_VERIFICATION.md` Test 4 for the full degree-distribution analysis and the falsification against scale-free.
 
 ## Modules
 

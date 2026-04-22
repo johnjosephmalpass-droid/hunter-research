@@ -1,4 +1,4 @@
-# HUNTER — Engineering Evolution
+# HUNTER: Engineering Evolution
 
 *How the instrument changed between the first version and the pre-registration-locked April 2026 build. What was added, what was removed, what was kept, and what the trade-offs were.*
 
@@ -23,21 +23,21 @@ The v1 Zenodo corpus contains outputs from at least two distinct pipeline iterat
 
 ## What was added (and why)
 
-**Mechanism kill.** The most substantive upgrade. Under the original pipeline, a hypothesis survived the kill phase if adversarial web-search could not find a direct fact-check refutation, a competitor already doing it, or a structural barrier. Under the new pipeline, the reviewer additionally demands that every causal arrow in the hypothesis name the specific filing, database, or workflow through which the output of one silo becomes an input to another. Arrows without a named pathway are rejected, regardless of whether fact-check succeeds. This is the single biggest reason output per cycle is lower in the new pipeline — claims that survived the old pipeline on argument quality can fail the new pipeline on lack of named mechanism.
+**Mechanism kill.** The most substantive upgrade. Under the original pipeline, a hypothesis survived the kill phase if adversarial web-search could not find a direct fact-check refutation, a competitor already doing it, or a structural barrier. Under the new pipeline, the reviewer additionally demands that every causal arrow in the hypothesis name the specific filing, database, or workflow through which the output of one silo becomes an input to another. Arrows without a named pathway are rejected, regardless of whether fact-check succeeds. This is the single biggest reason output per cycle is lower in the new pipeline, claims that survived the old pipeline on argument quality can fail the new pipeline on lack of named mechanism.
 
 Trade-off: fewer but harder-to-refute hypotheses in the new pipeline, versus more but less-mechanism-grounded hypotheses in the old. The 263-vs-61 volume split reflects this.
 
-**Three-tier model routing.** Opus 4.7 is routed to mechanism kill and adversarial scoring; Sonnet 4.5 to standard fact extraction and collision evaluation; Haiku 4.5 to anomaly detection and implication tagging. Cost efficiency improved substantially — ~$15–25/day under the three-tier routing versus ~$50–80/day under all-Sonnet. Critically, Opus at the mechanism-kill stage catches flaws that Sonnet missed, which tightens the kill phase independently of the mechanism-kill logic.
+**Three-tier model routing.** Opus 4.7 is routed to mechanism kill and adversarial scoring; Sonnet 4.5 to standard fact extraction and collision evaluation; Haiku 4.5 to anomaly detection and implication tagging. Cost efficiency improved substantially, ~$15–25/day under the three-tier routing versus ~$50–80/day under all-Sonnet. Critically, Opus at the mechanism-kill stage catches flaws that Sonnet missed, which tightens the kill phase independently of the mechanism-kill logic.
 
 **Fresh-context adversarial scoring with four calibration anchors.** Under the original pipeline, the same LLM that generated a hypothesis often scored it, creating scoring inflation. Under the current pipeline, a fresh LLM context with no memory of the generation step scores each surviving hypothesis against four pre-calibrated anchor scores (92 for a reference-quality hypothesis, 88 for a solid one, 35 for a thin one, 25 for a throwaway). This roughly eliminates self-grading inflation.
 
 **Theory agents.** Seven agents (`TheoryTelemetry`, `DecayTracker`, `CycleDetector`, `CollisionFormulaValidator`, `ChainDepthProfiler`, `BacktestReconciler`, `ResidualEstimator`) attach to the orchestrator on fixed schedules and write framework-auditing output into dedicated tables. These did not exist in the original pipeline; they are how the instrument watches itself for framework drift.
 
-**Pre-registration machinery.** The original pipeline had no formal study frame. The current build locks a corpus cutoff, hashes the eligible fact-ID set, hashes the code state, pre-commits three null baselines (random-pair, within-silo, shuffled-label), and fixes decision rules — including an explicit commitment to publish null results. This is the difference between an exploratory research instrument and a pre-registered empirical study.
+**Pre-registration machinery.** The original pipeline had no formal study frame. The current build locks a corpus cutoff, hashes the eligible fact-ID set, hashes the code state, pre-commits three null baselines (random-pair, within-silo, shuffled-label), and fixes decision rules, including an explicit commitment to publish null results. This is the difference between an exploratory research instrument and a pre-registered empirical study.
 
 ## What was narrowed (and why)
 
-**Domain scope: 14 → 18 professional financial silos.** The old 14 domains included Mathematics, Economics, Technology / AI, History, Science, Medicine, Geopolitics — a generalist's toolbox. The narrowing to 18 financial-adjacent silos was a deliberate focusing move once the operator's research interest concentrated on compositional alpha in finance. The archive output still shows traces of the old generalism (e.g. pre-pivot findings involving gaming platforms, medieval guilds, AI hardware — see the `findings` table limitation note in `docs/LIMITATIONS.md` L7). The new pipeline would not produce those.
+**Domain scope: 14 → 18 professional financial silos.** The old 14 domains included Mathematics, Economics, Technology / AI, History, Science, Medicine, Geopolitics, a generalist's toolbox. The narrowing to 18 financial-adjacent silos was a deliberate focusing move once the operator's research interest concentrated on compositional alpha in finance. The archive output still shows traces of the old generalism (e.g. pre-pivot findings involving gaming platforms, medieval guilds, AI hardware, see the `findings` table limitation note in `docs/LIMITATIONS.md` L7). The new pipeline would not produce those.
 
 **Collision strategies expanded: 3 → 7.** The original collision engine used entity matching, implication matching, and keyword fallback. The current engine runs seven strategies in parallel: those three plus model-field matching, causal-graph BFS, embedding similarity, and belief-reality contradiction. Matches from all seven are blended into a 10-fact pool before collision evaluation.
 
@@ -70,13 +70,13 @@ Three elements of the original pipeline are worth reconsidering for v2 (post-sum
 
 3. **Idea-evolution tracking.** The original pipeline tracked how hypotheses mutated across cycles (5 records in `idea_evolutions`). The current pipeline does not explicitly track this. Extending the lineage tracking so every current-pipeline hypothesis carries a pointer to its closest archive predecessor would make the archive usefully searchable by "did this theme already come up under the old pipeline?".
 
-None of these changes can happen during the summer run — the code is hash-locked. All three are v2 candidates for October 2026 onward.
+None of these changes can happen during the summer run, the code is hash-locked. All three are v2 candidates for October 2026 onward.
 
 ## Where the old code lives
 
-- **`archive/config_backup.py`** — full configuration snapshot from March 29, 2026. Contains the 14-domain definitions with their descriptions and example searches, the six-band diamond thresholds, the old token caps, and the old ingest ratio.
-- **`archive/v3_golden/`** — the v3 Golden retrospective experiment, which ran the original pipeline against past facts with `RETROSPECTIVE_DISABLE_WEB_SEARCH = True`. That experiment produced Stratum D < Stratum B, which is the contradictory pilot acknowledged in the README's Pre-registered Study section. It is preserved as a reminder that the primary-endpoint test is not a foregone conclusion.
-- **`archive/old_db_snapshots/`** — historical database snapshots; reference material only.
+- **`archive/config_backup.py`**, full configuration snapshot from March 29, 2026. Contains the 14-domain definitions with their descriptions and example searches, the six-band diamond thresholds, the old token caps, and the old ingest ratio.
+- **`archive/v3_golden/`**, the v3 Golden retrospective experiment, which ran the original pipeline against past facts with `RETROSPECTIVE_DISABLE_WEB_SEARCH = True`. That experiment produced Stratum D < Stratum B, which is the contradictory pilot acknowledged in the README's Pre-registered Study section. It is preserved as a reminder that the primary-endpoint test is not a foregone conclusion.
+- **`archive/old_db_snapshots/`**, historical database snapshots; reference material only.
 
 The original HUNTER was not deleted. It was deliberately frozen into an archive so the evolution is legible and the earlier output remains interpretable in context.
 

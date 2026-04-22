@@ -319,16 +319,16 @@ def render_html(predictions: list, track_record: dict) -> str:
 <html lang="en"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>HUNTER — Public Prediction Board</title>
+<title>HUNTER Public Prediction Board</title>
 <style>{CSS}</style>
 </head><body>
 <div class="container">
 
 <header>
-  <h1>HUNTER — Public Prediction Board</h1>
+  <h1>HUNTER Public Prediction Board</h1>
   <div class="sub">Every surviving hypothesis with a target-date resolution. Win or loss, both go on the ledger.</div>
   <div class="manifesto">
-    <strong>Rules of the board:</strong> Every prediction is posted before its outcome is known. Resolution dates are fixed at time of posting (thesis window + posting date). Outcomes are resolved against public evidence only — no retroactive adjustment. Failures stay visible forever. This is an undergraduate research project in the <em>compositional alpha</em> framework. Methodology: <a href="methodology.html">methodology brief</a>. Code: <a href="https://github.com/" target="_blank">GitHub</a>. Pre-registration: <code>preregistration.json</code> with locked code hash.
+    <strong>Rules of the board:</strong> Every prediction is posted before its outcome is known. Resolution dates are fixed at time of posting (thesis window + posting date). Outcomes are resolved against public evidence only; no retroactive adjustment. Failures stay visible forever. This is a solo-operator research project in the <em>compositional alpha</em> framework. Methodology: <a href="methodology.html">methodology brief</a>. Code: <a href="https://github.com/" target="_blank">GitHub</a>. Pre-registration: <code>preregistration.json</code> with locked code hash.
   </div>
 </header>
 

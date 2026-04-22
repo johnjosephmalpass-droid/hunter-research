@@ -1,4 +1,4 @@
-# HUNTER — Diamond theses (pre-freeze)
+# HUNTER: Diamond theses (pre-freeze)
 
 *Fifteen of the 324 pre-freeze hypotheses scored diamond-tier (≥ 75 on the 100-point adversarial review) across the two pipeline iterations. This document catalogues them by theme, with hypothesis ID, score, and the silo composition that makes each one compositional rather than additive. **None of these is a finding.** Each is a pre-freeze candidate that the Summer 2026 pre-registered study either validates out-of-sample or discards. Not investment advice.*
 
@@ -16,7 +16,7 @@ What makes each one compositional: each thesis combines ≥ 3 silos where removi
 
 ---
 
-## Tier 1 — diamond ≥ 90 (the hardest to kill pre-freeze)
+## Tier 1, diamond ≥ 90 (the hardest to kill pre-freeze)
 
 ### 1. NYC development municipal bond pre-shock underwriting
 
@@ -56,7 +56,7 @@ Independent transmission operators face a scheduled FERC debt-authority expiry o
 
 **Pipeline:** archive · **ID:** 306 · **Score:** 94
 
-Pension liability valuations are systematically understated by 8–12% because the ASC 715 / IAS 19 discount-rate models exclude CMBS securities from the AA yield curve construction due to office-sector stress, and the EU Taxonomy regime forces additional CMBS exclusions on European-issuer curves. The exclusion is mechanical and the resulting curve drift feeds directly into reported liability — but the actuarial applications silo doesn't monitor index-construction methodology in real time.
+Pension liability valuations are systematically understated by 8–12% because the ASC 715 / IAS 19 discount-rate models exclude CMBS securities from the AA yield curve construction due to office-sector stress, and the EU Taxonomy regime forces additional CMBS exclusions on European-issuer curves. The exclusion is mechanical and the resulting curve drift feeds directly into reported liability, but the actuarial applications silo doesn't monitor index-construction methodology in real time.
 
 **Silos:** ASC 715 / IAS 19 actuarial methodology · AA corporate bond universe construction · CMBS office distress · EU Taxonomy classification · pension sponsor disclosures.
 
@@ -86,7 +86,7 @@ Hotel CMBS tranches maturing in 2025–2026 were underwritten with 200–300 bps
 
 ---
 
-## Tier 2 — diamond 80–89
+## Tier 2, diamond 80–89
 
 ### 9. Office-to-data-center CMBS BB/BBB arbitrage
 
@@ -130,7 +130,7 @@ Pension funds using ALM models with stale cap-rate assumptions face a 175+ bps m
 
 ---
 
-## Tier 3 — the remaining Chapter 4 canonical themes (diamond 70–79)
+## Tier 3, the remaining Chapter 4 canonical themes (diamond 70–79)
 
 Four additional structural themes are explicitly named in the April 12 theory drafts as canonical HUNTER outputs even though their internal scores sit below the diamond-≥ 80 tier. They are listed here because their composition is exemplary of what the framework is designed to find, and because they are cross-referenced in `docs/HUNTER_THEORY.md`'s Layer-8 cycle example and in `docs/research_themes.md`.
 
@@ -180,14 +180,14 @@ Healthcare REITs with concentrated skilled-nursing-facility (SNF) portfolios are
 
 Across the eighteen theses above, eight structural themes recur. They align with `docs/research_themes.md` and with HUNTER's Layer-2 attention topology (Federal Register and NAIC filings being the two highest-centrality silo-connectors):
 
-1. **Commercial real-estate credit cascades** — CMBS → insurance reserve → pension liability → corporate bond (§1, §2, §6, §9, §10, §12, §13).
-2. **Regulatory-effective-date timing** — compliance costs on bonds priced before the rule (§1, §15, §17, §18).
-3. **Benchmark-universe construction lag** — AA yield curves, appraisal comps, LDI benchmarks (§3, §5, §13).
-4. **Filing-calendar snapshot-to-consequence mismatch** — Q1 statutory, 10-K timing, FERC expiry (§4, §6, §12).
-5. **Forward-curve marginal-generator assumptions** — oil peakers, interconnection queues (§7, §16).
-6. **Refinancing-spread regime shift** — stale spread assumptions in CMBS servicer models (§8, §9).
-7. **Hub-and-spoke methodology propagation** — ARGUS DCF assumptions as the single highest-degree node (§14).
-8. **Cross-border demographic / reimbursement lag** — Europe-specific (§11).
+1. **Commercial real-estate credit cascades**, CMBS → insurance reserve → pension liability → corporate bond (§1, §2, §6, §9, §10, §12, §13).
+2. **Regulatory-effective-date timing**, compliance costs on bonds priced before the rule (§1, §15, §17, §18).
+3. **Benchmark-universe construction lag**, AA yield curves, appraisal comps, LDI benchmarks (§3, §5, §13).
+4. **Filing-calendar snapshot-to-consequence mismatch**, Q1 statutory, 10-K timing, FERC expiry (§4, §6, §12).
+5. **Forward-curve marginal-generator assumptions**, oil peakers, interconnection queues (§7, §16).
+6. **Refinancing-spread regime shift**, stale spread assumptions in CMBS servicer models (§8, §9).
+7. **Hub-and-spoke methodology propagation**, ARGUS DCF assumptions as the single highest-degree node (§14).
+8. **Cross-border demographic / reimbursement lag**, Europe-specific (§11).
 
 ---
 
@@ -195,7 +195,7 @@ Across the eighteen theses above, eight structural themes recur. They align with
 
 **Pre-freeze, not validated.** Each thesis above scored ≥ 70 on the pre-freeze adversarial reviewer. That is not the same as surviving a pre-registered out-of-sample test. The summer 2026 study is the proper test. Until it reports, treat this document as *a catalogue of candidate mechanisms*, not findings.
 
-**Compositional, not additive.** Every thesis requires reading two or more professional silos simultaneously. Each cluster could be dismissed by a specialist in any single one of its silos as "already priced in within my domain" — and each of those specialists would be correct about their own silo. The claim is that the joint implication is not priced because no single participant holds all the silos.
+**Compositional, not additive.** Every thesis requires reading two or more professional silos simultaneously. Each cluster could be dismissed by a specialist in any single one of its silos as "already priced in within my domain", and each of those specialists would be correct about their own silo. The claim is that the joint implication is not priced because no single participant holds all the silos.
 
 **Structural, not temporal.** These are mechanisms, not trades. The mechanisms recur; the trades implementing them do not necessarily recur. Pointing at a mechanism is not the same as identifying an asset to buy or sell. The specific assets sit in the corpus but are not surfaced here.
 
