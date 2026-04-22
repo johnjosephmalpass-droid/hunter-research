@@ -1,161 +1,144 @@
-# HUNTER Ledger — Launch Post (Draft 2)
+# HUNTER Ledger — Launch Post
 
 ---
 
 ## Title options
 
-**A. The First Thing HUNTER Told Me** ← *recommended*
-**B. Good Stories Die First**
-**C. What I Found After Six Months of Reading Across Finance's Silos**
+**A. Good Stories Die First** ← *recommended*
+**B. The First Thing HUNTER Told Me**
+**C. What Happens When You Read All of Finance at Once**
 
-**Why A.** For a first post on a new Substack, the title has two jobs: give a non-subscriber a reason to click, and set up a serial. "The First Thing HUNTER Told Me" does both — it promises a specific piece of content (*the first thing*), and it implies there will be a second and third thing (*told me*, past tense, there is more). B is more provocative and I almost recommended it, but it gives the punchline away and boxes the post to one beat. C is the safe explainer and won't bang.
+**Why A.** A cold reader needs the punch in the title, not a tease. "Good Stories Die First" is a complete sentence that does work — it's a finding, it's counter-intuitive, and it names the whole post in five words. B is more literary but makes you read the subtitle to know what the post is about. C is the safe explainer and won't bang.
 
 ## Subtitle options
 
-**A.** ← *recommended* — Field notes from month six of an autonomous cross-silo research instrument. A finding I'd predicted the opposite of, a closed loop through six professions, and a scoreboard that starts filling on June 1.
-**B.** A Thursday in April, a minus-sign where I'd expected a plus-sign, and the commitment that either vindicates this project or buries it in public.
-**C.** Launching The HUNTER Ledger. One operator, one instrument, one public scoreboard.
+**A.** ← *recommended* — I built a program that reads across eighteen corners of finance that nobody reads together. The first thing it told me was the opposite of what I'd predicted. Here's what that means, and why I'm about to let you watch it succeed or fail in public.
+**B.** Field notes from month six of an autonomous cross-silo research instrument — one surprise finding and a pre-registered twelve-week public scoreboard starting June 1.
+**C.** Launching *The HUNTER Ledger*. One operator, one instrument, one public scoreboard.
 
-**Why A.** Three specific promises in one sentence, each one a different beat of the post. A methodologically serious reader sees "pre-registered" in the structure; a general reader sees "closed loop through six professions" and wants to know what that means. B is more literary but only covers one beat. C is what the About page subtitle should say, not this one.
+**Why A.** A subtitle for a cold reader should explain the project in one breath and promise stakes in the next. A does both. B assumes the reader already respects "pre-registered" and "out-of-sample"; most don't. C belongs on the About page.
+
+---
+
+# Good Stories Die First
+
+*I built a program that reads across eighteen corners of finance that nobody reads together. The first thing it told me was the opposite of what I'd predicted. Here's what that means, and why I'm about to let you watch it succeed or fail in public.*
 
 ---
 
-# The First Thing HUNTER Told Me
+## Two specialists who never meet
 
-*Field notes from month six of an autonomous cross-silo research instrument. A finding I'd predicted the opposite of, a closed loop through six professions, and a scoreboard that starts filling on June 1.*
+Let me start with a picture.
+
+The first specialist is a patent lawyer. He works out of an office in Midtown Manhattan. He reads United States Patent and Trademark Office filings eight hours a day, and he is extraordinary at it — he knows every classification code, every procedural quirk, every examiner's individual voice. He is paid very well to know these things. He does not read 10-K filings. His clients have no reason to need him to.
+
+The second specialist is an insurance actuary in Hartford. She reads reserve filings. She knows the National Association of Insurance Commissioners' model law by heart; she tracks statutory accounting principles across all fifty states; she can read a quarterly solvency filing and tell you, in thirty seconds, which life insurer is under-reserved. She does not read patent filings. Her models don't use them.
+
+These two people walk past each other every morning, metaphorically speaking. Maybe they live in the same city. Maybe they sit next to each other on a train. They are both excellent at what they do. They never talk about work.
+
+And somewhere between them — between the patent office and the insurance reserve, between the Federal Register and the commercial real-estate delinquency report, between the safety regulator and the semiconductor supply chain — there are facts that, when combined, imply something specific about a specific price.
+
+No single person reads both rooms. So the facts are public, and the implication is private. Only the price ever shows it. And the price is wrong.
+
+**That is the whole thing.** That is what this newsletter is about.
 
 ---
+
+## What I built
+
+Six months ago I opened a blank Python file and started writing a program called HUNTER. The name is the job description. It sits between the rooms. It reads across eighteen corners of finance — patents, regulatory filings, insurance reserves, commercial real-estate servicing reports, commodity inventories, federal rule-making, job listings, app-store rankings, academic preprints, drug approvals, distressed credit, healthcare property trusts, and so on — all at once.
+
+Every fact HUNTER reads gets broken down into its components: the specific claim, the entities involved, the date, the source, and — the part that matters — *its implications for professional communities that don't read this room*. Every fact carries a note that says, in effect, "this matters to insurance actuaries because their capital calculation assumes X, and this changes X. But they don't read Federal Register notices, so they don't know yet."
+
+Then HUNTER looks for collisions. Two facts from two different rooms that, when combined, imply a third thing neither implies alone. When it finds one, it does not celebrate. It tries to destroy it. It runs four rounds of adversarial checks, each one web-searching for reasons the claim is wrong — maybe one of the underlying facts is incorrect, maybe a competitor already published the thesis, maybe a regulatory barrier makes it un-tradeable, maybe the causal mechanism doesn't actually connect the way you claim.
+
+If the claim survives all four rounds, HUNTER writes it down as a *hypothesis* — a specific, time-bounded, testable statement about a specific asset, with a resolution date. Each hypothesis gets scored on six dimensions by a separate adversarial reviewer, a fresh context with no memory of how the claim was generated, against four calibrated reference points. Only the strongest claims cross the threshold.
+
+After six months of running, HUNTER had produced three hundred and twenty-four of these surviving hypotheses across two pipeline iterations. Each one carried a mechanism, a direction, and a date. I was ready to stop feeding it and start asking it questions about its own work.
+
+---
+
+## The Thursday afternoon
 
 It was a Thursday afternoon in April. I was at the kitchen table, laptop open, running on tea.
 
-HUNTER had been alive for six months by then. I'd accumulated enough output — three hundred and twenty-four hypotheses through the full adversarial kill phase across two pipeline iterations, each one scored on six dimensions, each one carrying a resolution date — that I was ready to stop feeding it and start asking it questions about its own work.
+The question I had was small. Months earlier, when I'd been designing the scoring system, I'd added a measurement called *narrative strength*. Every hypothesis got a score from zero to one on whether it read like a clean story — protagonist, villain, catalyst, resolution — or like a tangle of technical notes.
 
-The question I had that afternoon was small. I wanted to check one of my own predictions.
+I'd added this because I had a theory. Hypotheses with clean stories ought to survive adversarial review longer. A good narrative is a grip. It's what lets a claim stay memorable under attack. I expected a positive correlation between narrative strength and kill-round survival. Maybe a strong one.
 
-Months earlier, when I had been designing the scoring system, I'd added a measurement called *narrative strength*. Every hypothesis got a score from zero to one on whether it read like a clean story — protagonist, catalyst, complication, resolution — or like a tangle of technical notes. I had added this because I had a theory. The hypotheses with clean stories ought to survive the kill rounds longer. A good narrative is a grip. It's what lets a claim stay memorable under pressure. I expected a positive correlation between narrative strength and kill survival. Maybe a strong one.
+I opened a new terminal. Pulled the numbers. Asked Python for the Pearson correlation across all three hundred and twenty-four hypotheses.
 
-I opened a new terminal. Wrote a small script. Pulled narrative scores and survival outcomes into two arrays. Asked Python for the Pearson correlation between them.
+**r = −0.27.**
 
-On the sixty-one most recent hypotheses — the ones from the current upgraded pipeline, the ones with mechanism-kill turned on — I got **r = −0.49**.
+Negative.
 
-I ran it again. Same number.
+On the sixty-one most recent hypotheses — the ones from the upgraded pipeline, which adds an extra adversarial round — the number was **r = −0.49**. Roughly twice as strong, and same sign.
 
-Strong-narrative hypotheses had died *more* often under the kill rounds. Not less. The ones that scored highest for storytelling — clean arc, clear villain, memorable catalyst — died almost every time. The ones that scored lowest, the awkward ones that take ten pages to explain and that you'd never tell at a dinner party, survived most of the time.
+Strong-narrative hypotheses died *more* often under adversarial review. Not less. The ones with the cleanest arcs died almost every time. The ones that looked like a tangle of technical notes — awkward, full of jargon, impossible to tell at a dinner party — survived most often.
 
-So I ran it on the full 324. All of them. Both pipeline tiers. The combined correlation came back at **r = −0.27**. Weaker than −0.49, same sign. Still statistically serious — a permutation test over 10,000 shuffles returns *p* < 0.00001.
+![Narrative strength versus kill-round survival, n = 324](launch_img/narrative_survival.png)
 
-I stared at the screen for a minute. Made another tea. Sat down to figure out what had just happened.
-
-A serious reader should pause on that chart. The high-narrative bin is only seven hypotheses. If two of those seven had gone the other way, the headline would soften considerably. The workhorse of the correlation is really the drop from 42.6% to 19.9% across the two larger bins, n = 176 and n = 141, and that's the part that would survive even if the high-narrative tail were removed entirely.
-
-There is also a second fact on the chart worth naming. The −0.49 number I got first was measured only on the upgraded pipeline — the tier where each hypothesis has to name the specific filing, database, or workflow through which the output of one silo becomes an input to another. On the older pipeline, which didn't apply that test, the same correlation came in at only −0.23, about half as strong. That isn't noise. It tells me something about *which* kill round is doing the work. I'll come back to it in a moment.
-
-So: the sign is flipped from what I predicted. The magnitude is softer on the pooled sample than on the upgraded-pipeline subset alone. Both of those are true and both of them belong in the same paragraph.
-
-It took me three days to sit with the number. When I understood it, it reframed the whole project.
-
+The permutation test over ten thousand shuffles gives *p* < 0.00001 on the combined sample. The sign of the correlation is not an accident. What the correlation *means* took me three days to understand.
 
 ---
 
-## Welcome to The Ledger
+## Why
 
-This is the first post on *The HUNTER Ledger*. A fair question is *what is this*, and a fair answer is: the [About page](#about) walks you through what HUNTER is and how it works. The short version, for this post: it's a Python program I've been building alone since last November, reading across eighteen corners of finance that nobody reads together, trying to find combinations of facts that imply something specific about a price, and adversarially hunting the surviving combinations for ways to destroy them before calling them useful. It's been running for six months. On June 1 it begins a twelve-week pre-registered study whose rules are already locked.
+Here is what I think the data is telling me.
 
-The Ledger is where I'll write about all of it. Methodology most weeks. Field notes when something surprises me. Ledger entries whenever a prediction resolves. Losses without soft-focus.
-
-I wanted the first post to do something an introduction can't. I wanted it to show you, concretely, what this newsletter is going to be like. So here are three specific things HUNTER has found in its first six months. One I had predicted the exact opposite of. One is a shape in the data I didn't know was there. And one is a commitment — already locked, already timestamped — about what happens in ten weeks and what follows.
-
----
-
-## I. Good stories die first
-
-Back to the Thursday afternoon, because it's the cleanest of the three findings and it took me the longest to understand.
-
-Here's the pattern I had expected. A cross-silo hypothesis is, by construction, a fragile thing. It argues — often awkwardly — that a specific combination of facts from different corners of finance implies something specific about a price. Any one of the underlying facts might be wrong. The transmission pathway from one silo into the next might not exist the way you claim. The combination might already be published and already priced in. The trade direction might be inverted. There are many ways for one of these things to die.
-
-Against all of that, a clean story should be an advantage. A hypothesis you can tell in one paragraph — with a villain, a catalyst, a date — is memorable. You can point at the shape of it when someone attacks. Strong narrative, I thought, equals durable claim. That was the prior.
-
-What HUNTER showed me was the exact opposite. The hypotheses with the cleanest narratives were the ones the adversarial kill rounds destroyed first. The ones that survived were structural, awkward, full of jargon, impossible to pitch to anyone who wasn't already holding four of the relevant silos in their head.
-
-![Narrative strength vs kill survival](launch_img/narrative_survival.png)
-
-It took me a while to see why. The moment it clicked was when I realised the kill rounds do their work by *web-searching*. Each round tries to find counter-evidence. Competitor claims. Rebuttals. Papers that already make the argument. Blog posts. Analyst notes. A real adversarial reviewer with access to Google and a reason to destroy the claim.
+The adversarial review rounds work by web-searching. Each round tries to find counter-evidence — papers that already make the argument, blog posts, rebuttals, competitor filings, analyst notes. A real adversarial reviewer with access to Google and a reason to destroy the claim.
 
 And a clean narrative is exactly what a web search can find.
 
-If a cross-silo thesis has a protagonist and a villain and a clean arc, someone has already written that story. Probably several someones. Which means the kill round finds the counter-article. The story is a *fingerprint*. It tells you the thesis is already in circulation, which means the market has already reacted to it, which means the edge is gone.
+If a hypothesis has a protagonist and a villain and a clean arc, somebody has probably already written that story. Several somebodies, usually. Which means the adversarial round finds the counter-article, and the hypothesis dies. **The story is a fingerprint.** It tells you the thesis is already in circulation, which means the market has already reacted to it, which means the edge is already gone.
 
-The theses that survive are the ones nobody has written yet. They take ten pages to explain because four of those pages are teaching the reader the vocabulary of the four silos the thesis draws on. They are awkward because they live in a space no single professional community has colonised. Nobody has written the clean version of these stories because no single person has had access to all the silos they require. So the stories stay unwritten. The corrections never get published. The edge stays.
+The hypotheses that survive are the ones nobody has written yet. They take ten pages to explain because four of those pages are teaching the reader the vocabulary of the four rooms the thesis draws on. They are awkward because they live in a space no single professional community has colonised. Nobody has written the clean version because no single person has had access to all the rooms at once. So the stories stay unwritten, the corrections never get published, and the price stays wrong.
 
-Weak narrative, in other words, is a *proxy for structural opacity*. It's evidence that the claim exists somewhere the market's narrative apparatus hasn't reached. And the narrative apparatus — analyst reports, business press, academic literature, sell-side research — is exactly what Shleifer and Vishny taught us is the channel through which mispricings get corrected.
+Weak narrative, in other words, is *evidence of structural opacity*. The market's correction machinery runs through analyst reports, business press, academic literature, sell-side research — the narrative apparatus. If a story hasn't been written, there is nothing for that machinery to read, and nothing drives the price to correct.
 
-If a story hasn't been written, there is nothing for the market to read. Nothing to drive correction. The mispricing stays exactly where HUNTER found it.
+There is a second fact in the data that tightens this interpretation. When I split the correlation by pipeline tier, the effect roughly doubles — from −0.23 in the older batch to −0.49 in the newer one. The difference between the two batches is one specific adversarial round: the newer pipeline demands that every causal arrow in the hypothesis name the specific filing, database, or software product through which one room's output becomes another room's input. If you can't name the pathway, the arrow is rejected and the hypothesis dies.
 
-This is also where the pipeline-tier split becomes interesting rather than embarrassing. The older pipeline's kill rounds asked whether the claim was factually wrong, whether a competitor had already published it, whether a structural barrier made it un-tradeable. The upgraded pipeline asks all of that and then adds a fourth round: for each causal arrow you're claiming, name the specific filing, database, or workflow through which the output of system A enters the input of system B. If you can't name the pathway, the arrow is broken and the whole hypothesis fails. That's the round with the web search. That's the round that penalises clean stories. And that's precisely where the correlation roughly doubles from −0.23 to −0.49. The mechanism-kill round is the specific channel through which narrative clarity becomes a liability, because clean narratives produce findable counter-evidence at named institutions and awkward ones don't.
+That is the round that involves web search. That is the round that destroys clean stories. And that is precisely where the anti-narrative effect is concentrated.
 
-I would not have reached this conclusion by sitting in a chair and thinking. I reached it because I had built an instrument that disagreed with me, logged the disagreement, and then — when I extended the analysis to a larger sample — told me *which part of itself* was doing the disagreeing. The instrument made me sharper than I was when I started. That, I think, is what instruments are for.
+I would not have figured this out by sitting in a chair and thinking. I figured it out because I'd built an instrument that disagreed with my prediction, logged the disagreement, and — when I extended the analysis to a larger sample — told me *which part of itself* was doing the disagreeing.
 
----
-
-## II. A closed loop through six professions
-
-A few weeks after the narrative finding, HUNTER produced something else. Not a hypothesis this time. A *shape*.
-
-Quietly, in the background, while the rest of the pipeline runs, HUNTER builds a causal graph. Every fact it reads, it extracts the cause-and-effect arrows implicit in that fact. *COMEX silver inventory drawdown → photovoltaic manufacturing silver cost rises.* *NAIC reserve methodology update → life insurer statutory capital ratio shifts.* *OSHA silica exposure-limit reduction → Cleveland-Cliffs blast-furnace compliance cost rises.*
-
-These arrows accumulate. Over six months, across all 324 hypotheses and the 12,030 raw facts beneath them, the graph grew to one hundred and seventy-one directed edges connecting more than eleven thousand distinct entities across eighteen silos.
-
-Every so often I run a small algorithm over it. The algorithm is called Tarjan's strongly-connected-components, and what it does — in plain English — is find closed loops in directed graphs. Paths that start somewhere, walk through a sequence of other nodes, and end up back at the starting node.
-
-It found nine of them.
-
-The strongest loop had six nodes. It looked like this:
-
-![The six-node cycle](launch_img/six_node_cycle.png)
-
-Six professional domains. Six different academic literatures. Six populations of specialists who almost never read each other's output. And a *closed loop* of causal arrows running through every one of them.
-
-Every arrow in the loop had a specific, nameable transmission pathway. I can cite filenames. Appraised property values flow directly into CMBS servicer loan-level databases through Morningstar and DBRS surveillance products. CMBS loan-level performance feeds bond portfolio managers through Intex analytics. NAIC IRIS filings distribute insurance capital ratios into the corporate credit rating models that structured-finance desks then use to price the next generation of loans. Every edge in the diagram is traceable to a specific data feed, filing standard, or software product. The loop is not an abstraction.
-
-Here is why a closed loop in a causal graph is a particular kind of problem.
-
-An error that enters at one node gets used as *input* by the next node. That node runs its calculation and produces output. The output feeds the next node, which treats the original error as if it were corroborated ground truth and produces its own output. Which feeds the next. Which arrives, eventually, back at the first node — with the original error still embedded, now confirmed by having passed through five other professional communities that each treated it as ratified.
-
-Economists have a word for this when it happens socially. *Echo chamber*. We use the word loosely, the way you might describe a crowd. What HUNTER gives you is the actual circuit diagram. You can point at each node. Every edge has a name. The loop closes in a specific, drawable, mechanical way.
-
-All nine loops HUNTER has detected in the current corpus share a technical property. The rate at which each loop reinforces its own outputs is greater than or equal to the rate at which external evidence corrects it. In Markov-chain terms these are *absorbing states*. They do not decay toward truth. They settle into the wrong answer and they stay there.
-
-Whether the market eventually re-prices these loops — whether any of them is actually *tradeable* versus merely observable — is a different question. That is the third thing.
+That, I think, is what instruments are for.
 
 ---
 
-## III. The scoreboard
+## One honest note on the chart
 
-Everything above is a pattern in a frozen dataset — 12,030 facts, 324 hypotheses, 171 causal edges, nine detected loops, all of it published. I've measured things. I've published the measurements. The data is on Zenodo, the code is on GitHub. That's useful. It isn't proof.
+The high-narrative bin — the bar on the right marked 14.3% — is only seven hypotheses. If two of those seven had gone the other way, the headline would soften considerably. The real workhorse of the correlation is the drop from 42.6% to 19.9% between the two larger bins, with 176 and 141 hypotheses respectively. That part would survive even if the high-narrative tail were removed entirely.
 
-What would be proof is if HUNTER, running forward in time, could identify cross-silo mispricings in advance, post them publicly with resolution dates, and be right more often than chance.
+I mention this because it is the kind of thing I would catch in somebody else's chart within four seconds, and I'd rather catch it first in my own.
 
-Starting June 1, that's what this Substack is going to be a record of.
+---
 
-The setup is locked already. There's a pre-registration manifest in the GitHub repository — a file called `preregistration.json` — with a SHA-256 hash of `f39d2f5ff6b3e695`. It was locked on April 19. The corpus is frozen at March 31. The code state is frozen. Three null baselines are committed in advance: random-pair, within-silo, shuffled-label. The primary pre-registered test is a specific ordering of compositional-depth strata, with a specific statistical threshold, decided in advance. If HUNTER's output fails the primary test, I've committed in writing — in the manifest, on GitHub — to publishing the null result.
+## The part where I put it on the line
 
-Between June 1 and August 31, HUNTER runs prospectively against the frozen corpus. Hypotheses that clear the diamond threshold get posted on the public prediction board with asset name, direction, and resolution date. First resolutions around mid-July. By late August the ledger either shows the instrument can do what it claims, or shows that it can't. In September one of two papers goes up on SSRN. There is no third option.
+Everything above is a pattern in a frozen dataset. I've measured things. I've published the measurements. The data is on Zenodo, the code is on GitHub. That is useful. It is not proof.
 
-I want to be explicit about why I'm locking it this way.
+What would be proof is if HUNTER, running forward in time, could identify mispricings in advance, post them publicly with resolution dates, and be right more often than chance.
 
-An earlier internal pilot of HUNTER — one I call "v3 Golden" — produced the *opposite* of what the primary hypothesis predicts. The deepest cross-silo compositions underperformed the simpler ones. That pilot ran with the kill phase's live web search *disabled*, which happens to be the specific channel through which cross-silo advantages are supposed to differentiate themselves. The summer run has web-searched mechanism kills turned on. If the summer also inverts, the framework needs structural revision, not recalibration, and I've committed in advance — now, publicly, in the manifest — to saying so.
+Starting June 1, that is what this Substack is going to be a record of.
 
-I'm one person. I built this alone. Those are reasons to be sceptical, and if you want to be, I can only point out that everything is on GitHub and Zenodo and you are genuinely free to argue with me using my own data. What I've tried to do, instead of waiting to be caught, is publish my own weaknesses first. The framework's most specific quantitative prediction — how fast compositional value decays as you add more silos to a hypothesis — is contradicted by HUNTER's own data. The theory said the decay rate should be around 0.27. The data says it's closer to 0.94. The decay is much shallower than the framework claimed. And it fails the same way in both pipeline tiers independently: an earlier 263-hypothesis run under the older pipeline and the current 61-hypothesis run under the upgraded one both produce the shallow-decay pattern, which rules out "the pipeline did something weird" as an explanation. The refutation replicates across 324 hypotheses, not 61. I published that self-refutation in the repository on purpose. I would rather be the person who finds the hole than the person who gets caught not seeing it.
+I have locked the rules in advance. On April 19 I wrote a file called `preregistration.json`, committed it to GitHub, and hashed the code state. The hash is `f39d2f5ff6b3e695`. That hash is immutable. It means I cannot retroactively change what HUNTER looks for, how it scores, or what counts as a win. The corpus is frozen at March 31. Three null-baseline tests are committed in advance. The primary test is one specific statistical claim about how compositional depth across rooms affects realised returns. I have committed, in writing, to publishing the null result if HUNTER fails.
+
+Between June 1 and August 31, HUNTER runs prospectively. Hypotheses that clear the threshold get posted on a public prediction board with asset name, direction, and resolution date. First resolutions land around mid-July. By late August, the board either shows the instrument can do what it claims or shows that it can't. In September, one of two papers goes up on SSRN. There is no third option.
+
+I am going to be honest about something else. An earlier internal pilot of HUNTER produced the *opposite* of what the summer test predicts — the deepest cross-room hypotheses underperformed the simpler ones. That pilot ran with the web-searching adversarial rounds disabled, which happens to be the specific channel the summer test is about. The summer runs with web search turned on. If the summer also inverts, the framework needs structural revision rather than recalibration, and I've committed in advance to saying so.
+
+I'm one person. I built this alone at University College Dublin. Those are reasons to be sceptical. What I've tried to do, instead of waiting to be caught, is publish my own weaknesses first. HUNTER's own data contradicts its most specific quantitative prediction — the framework said value should decay across composition depth at a rate of roughly 0.27; the data says 0.94, much shallower. The refutation replicates across both pipeline tiers independently, which rules out a pipeline artefact. I published that in the repository on purpose. I would rather be the person who finds the hole than the person who gets caught not seeing it.
 
 ---
 
 ## What this Substack is going to be
 
-Weekly posts between now and June 1. Mostly methodology notes and field reports. The engineering story of why the current version of HUNTER finds *fewer* hypotheses than its predecessor and why I think that's the right direction of travel. The eight recurring structural themes the top-scoring output keeps returning to — commercial-real-estate credit cascades, regulatory-transition timing, benchmark-universe construction lag. The single node in the causal graph — ARGUS Enterprise DCF, a piece of commercial real-estate valuation software — that sits at the centre of nine different cross-silo pathways, and what it means for market structure that a closed-source software default is the highest-centrality node in financial methodology.
+Between now and June 1, I will post weekly. Methodology notes. Field reports. The engineering story of why the current version of HUNTER finds *fewer* hypotheses than its predecessor and why that is the right direction of travel. The eight recurring structural themes the top-scoring output keeps returning to. The single closed-source piece of commercial-real-estate valuation software that, according to HUNTER's causal graph, sits at the centre of nine different cross-silo pathways simultaneously — and what it means for market structure that a corporate software default is the highest-centrality node in financial methodology.
 
 After June 1, the content changes. The prediction board fills. I post. Dates pass. Predictions resolve. Some will be wins. Some will be losses. I don't get to hide either.
 
-If the ledger works, what exists at the end of summer is a structured causal map of cross-silo financial reality with a real, dated track record attached. If the ledger doesn't work, what exists at the end of summer is a pre-registered null result about a specific hypothesis, which is also a finding, and also publishable.
+If the ledger works, what exists at the end of summer is a structured map of cross-silo financial reality with a dated public track record attached. If the ledger doesn't work, what exists at the end of summer is a pre-registered null result, which is also a finding, and also publishable.
 
 Both outcomes are fine. The only outcome that isn't fine is not publishing.
 
@@ -165,4 +148,4 @@ The fun part starts now.
 
 — John
 
-*John Malpass · University College Dublin · April 2026. Code: [github.com/Johnmalpass/hunter-research](https://github.com/Johnmalpass/hunter-research). Corpus: [10.5281/zenodo.19667567](https://doi.org/10.5281/zenodo.19667567). Board: [johnmalpass.github.io/hunter-research](https://johnmalpass.github.io/hunter-research/).*
+*John Malpass · University College Dublin · April 2026. Code: [github.com/Johnmalpass/hunter-research](https://github.com/Johnmalpass/hunter-research). Corpus: [10.5281/zenodo.19667567](https://doi.org/10.5281/zenodo.19667567). Public prediction board: [johnmalpass.github.io/hunter-research](https://johnmalpass.github.io/hunter-research/).*
