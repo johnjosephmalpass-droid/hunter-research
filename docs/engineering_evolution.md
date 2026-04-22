@@ -2,7 +2,7 @@
 
 *How the instrument changed between the first version and the pre-registration-locked April 2026 build. What was added, what was removed, what was kept, and what the trade-offs were.*
 
-The v1 Zenodo corpus contains outputs from at least two distinct pipeline iterations. The earlier run (March 28 – April 3, 2026, `hypotheses_archive` table, 263 hypotheses) was produced under a substantially different engineering configuration than the later run (April 1 – April 4, 2026, `hypotheses` table, 61 hypotheses). This document is a cross-walk so readers can interpret the output by the pipeline that produced it. A snapshot of the earlier configuration is preserved in `archive/config_backup.py`.
+The v1 Zenodo corpus contains outputs from at least two distinct pipeline iterations. The earlier run (March 28 – April 3, 2026, `hypotheses_archive` table, 263 hypotheses) was produced under a substantially different engineering configuration than the later run (April 1 – April 4, 2026, `hypotheses` table, 61 hypotheses). This document is a cross-walk so readers can interpret the output by the pipeline that produced it. The operator's local archive preserves a snapshot of the earlier configuration; the relevant retrospective-pilot flags (`V3_GOLDEN_*`, `RETROSPECTIVE_DISABLE_WEB_SEARCH`) are still present in `config.py` so the public repo remains self-describing.
 
 ---
 
@@ -47,7 +47,7 @@ Trade-off: fewer but harder-to-refute hypotheses in the new pipeline, versus mor
 
 - The **collision formula** has the same functional form in both pipelines; only the weights refit.
 - The **database schema** is append-only; every table that existed in March exists today.
-- The **226-table count**, **26 LLM prompts**, and **153-pair distance matrix** are the current version; earlier versions had different counts but the architecture is the same.
+- The **52-table count**, **26 LLM prompts**, and **153-pair distance matrix** are the current version; earlier versions had different counts but the architecture is the same.
 - **The seven matching strategies**, **four-round kill gauntlet**, and **adversarial scoring** are present in both pipelines; the mechanism-kill expansion is the upgrade.
 
 ## Which pipeline's output should a reader trust?
@@ -74,11 +74,13 @@ None of these changes can happen during the summer run, the code is hash-locked.
 
 ## Where the old code lives
 
-- **`archive/config_backup.py`**, full configuration snapshot from March 29, 2026. Contains the 14-domain definitions with their descriptions and example searches, the six-band diamond thresholds, the old token caps, and the old ingest ratio.
-- **`archive/v3_golden/`**, the v3 Golden retrospective experiment, which ran the original pipeline against past facts with `RETROSPECTIVE_DISABLE_WEB_SEARCH = True`. That experiment produced Stratum D < Stratum B, which is the contradictory pilot acknowledged in the README's Pre-registered Study section. It is preserved as a reminder that the primary-endpoint test is not a foregone conclusion.
-- **`archive/old_db_snapshots/`**, historical database snapshots; reference material only.
+The original HUNTER was not deleted. It was deliberately frozen into the operator's local archive so the evolution is legible and the earlier output remains interpretable in context. That archive is not redistributed in the public repo (the `archive/` path is gitignored), but the *state it represents* is fully recoverable from public artefacts:
 
-The original HUNTER was not deleted. It was deliberately frozen into an archive so the evolution is legible and the earlier output remains interpretable in context.
+- The **v3 Golden retrospective experiment** ran the original pipeline against past facts with `RETROSPECTIVE_DISABLE_WEB_SEARCH = True` and produced Stratum D < Stratum B, the contradictory pilot acknowledged in the README's Pre-registered Study section. The `V3_GOLDEN_*` constants in `config.py` (six occurrences) describe the run's exact configuration and can be re-enabled to reproduce it.
+- The **old 14-domain configuration** (Mathematics, Economics, Tech / AI, History, Science, Medicine, Geopolitics, etc.) is summarised in the table above; the full per-domain example searches are available on request.
+- **Historical database snapshots** from the development window are reference-only and are not required to interpret the public Zenodo corpus, which is the canonical data artefact.
+
+Readers who want to replicate the pre-April-19 pipeline should flip `RETROSPECTIVE_DISABLE_WEB_SEARCH = True` in `config.py` and run the main loop against the frozen Zenodo corpus; the resulting output should be in the same regime as `hypotheses_archive`.
 
 ---
 

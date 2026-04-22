@@ -2,7 +2,7 @@
 
 *Structural themes only. No tickers, no entry prices, no trade directions. Every theme below is a pre-freeze pattern that the summer 2026 pre-registered study is the proper test of, not a confirmed finding. Do not treat this as investment advice or a research note.*
 
-HUNTER produced 324 hypotheses across two pipeline iterations in the pre-freeze window (March 28 – April 3, 2026 for the archive; April 1 – 4 for the main table). Of those, 13 scored diamond ≥ 75 on the internal adversarial review. Those top hypotheses cluster into a handful of structural themes that are worth naming here, not because they are empirically validated (they aren't, yet), but because naming the themes illustrates the kind of cross-silo composition the instrument is built to surface.
+HUNTER produced 324 hypotheses across two pipeline iterations in the pre-freeze window (March 28 – April 3, 2026 for the archive; April 1 – 4 for the main table). Of those, 18 scored diamond ≥ 75 on the internal adversarial review (13 in the archive, 5 in the main table). Those top hypotheses cluster into a handful of structural themes that are worth naming here, not because they are empirically validated (they aren't, yet), but because naming the themes illustrates the kind of cross-silo composition the instrument is built to surface.
 
 ---
 

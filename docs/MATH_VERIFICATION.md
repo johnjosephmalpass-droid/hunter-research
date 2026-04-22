@@ -132,7 +132,7 @@ Still: zero counterexamples among n = 9 detected cycles. Not one cycle in the pr
 
 Instead of A ≤ B ≤ C ≤ D, the data shows **A < B > C ≈ D**. B dominates. The pre-registered monotonic prediction fails on pre-freeze score data.
 
-**Consistency with v3 Golden.** The earlier retrospective pilot (`archive/v3_golden/`) already produced Stratum D < Stratum B. Two independent cuts of the pre-freeze data, the retrospective pilot and the combined 324-hypothesis corpus, agree that the primary endpoint's monotonic form is not supported.
+**Consistency with v3 Golden.** The earlier retrospective pilot (the `V3_GOLDEN_*` configuration in `config.py`, run locally; not redistributed in the public repo) already produced Stratum D < Stratum B. Two independent cuts of the pre-freeze data, the retrospective pilot and the combined 324-hypothesis corpus, agree that the primary endpoint's monotonic form is not supported.
 
 **What summer tests.** The pre-registered test runs on realised alpha (not diamond score) under upgraded mechanism-verified kill. Diamond score is a reviewer's judgment of a hypothesis quality; realised alpha is what markets do. The relationship between score and alpha is one of the open empirical questions the study settles. It is possible (though not guaranteed) that the depth-score hump and the depth-alpha relationship diverge under live market conditions, in which case the pre-reg monotonic prediction may still hold even though the pre-freeze score hump does not support it.
 

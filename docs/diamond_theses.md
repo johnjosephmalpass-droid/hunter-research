@@ -1,6 +1,6 @@
 # HUNTER: Diamond theses (pre-freeze)
 
-*Fifteen of the 324 pre-freeze hypotheses scored diamond-tier (≥ 75 on the 100-point adversarial review) across the two pipeline iterations. This document catalogues them by theme, with hypothesis ID, score, and the silo composition that makes each one compositional rather than additive. **None of these is a finding.** Each is a pre-freeze candidate that the Summer 2026 pre-registered study either validates out-of-sample or discards. Not investment advice.*
+*Of the 324 pre-freeze hypotheses, 18 scored diamond-tier (≥ 75 on the 100-point adversarial review) across the two pipeline iterations, and four additional 70–74 theses are included at the end because their compositional structure is exemplary of what the framework is built to find. This document catalogues all of them by theme, with hypothesis ID, score, and the silo composition that makes each one compositional rather than additive. **None of these is a finding.** Each is a pre-freeze candidate that the Summer 2026 pre-registered study either validates out-of-sample or discards. Not investment advice.*
 
 **Corpus of record:** `hunter_corpus_v1.sqlite` on Zenodo ([10.5281/zenodo.19667567](https://doi.org/10.5281/zenodo.19667567)). Every ID below resolves to a row in either `hypotheses` (main pipeline, April 1–4, upgraded mechanism-kill) or `hypotheses_archive` (earlier pipeline, March 28 – April 3). Score is the internal adversarial-review diamond grade.
 
@@ -8,7 +8,7 @@
 
 ## How to read this
 
-A thesis appears here if it satisfies three conditions: (1) it scored ≥ 70 on internal adversarial review, (2) it combines at least three silos in a load-bearing way (removing any one silo collapses the thesis), and (3) the first round of fact-check and competitor-kill did not find a disconfirming external source.
+A thesis appears here if it satisfies three conditions: (1) it scored ≥ 70 on internal adversarial review (≥ 75 for Tiers 1 and 2; 70–74 for the four Tier 3 inclusions), (2) it combines at least three silos in a load-bearing way (removing any one silo collapses the thesis), and (3) the first round of fact-check and competitor-kill did not find a disconfirming external source.
 
 Every diamond below is a **structural mechanism**, not a trade. A mechanism like *"statutory filing dates create snapshot-to-consequence timing mismatches that bridge CMBS distress into insurance regulatory capital"* can recur across many specific filings and many specific carriers. Pointing at the mechanism is not the same as identifying a specific asset. The specific assets sit inside the corpus; they are not surfaced in this document.
 
@@ -130,9 +130,9 @@ Pension funds using ALM models with stale cap-rate assumptions face a 175+ bps m
 
 ---
 
-## Tier 3, the remaining Chapter 4 canonical themes (diamond 70–79)
+## Tier 3, additional canonical themes (diamond 70–79)
 
-Four additional structural themes are explicitly named in the April 12 theory drafts as canonical HUNTER outputs even though their internal scores sit below the diamond-≥ 80 tier. They are listed here because their composition is exemplary of what the framework is designed to find, and because they are cross-referenced in `docs/HUNTER_THEORY.md`'s Layer-8 cycle example and in `docs/research_themes.md`.
+Five additional structural themes are included here because their composition is exemplary of what the framework is designed to find, and because they are cross-referenced in `docs/HUNTER_THEORY.md`'s Layer-8 cycle example and in `docs/research_themes.md`. The first (ARGUS Enterprise DCF, score 75) is diamond-tier; the remaining four sit between 70 and 74 and are included for structural-interest reasons despite falling below the ≥ 75 threshold.
 
 ### 14. ARGUS Enterprise DCF legacy-platform disconnect
 

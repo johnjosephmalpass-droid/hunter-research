@@ -103,7 +103,7 @@ flowchart LR
   G --> H["LEDGER<br/>public board"]
 ```
 
-Every stage is defined in `prompts.py` (26 LLM prompts, one per step) and routed through `config.py` (18 source types, 153-pair hand-calibrated domain distance matrix, 220 ingest queries). The causal graph, model-field extractions, and adversarial review traces all persist to 43 database tables.
+Every stage is defined in `prompts.py` (26 LLM prompts, one per step) and routed through `config.py` (18 source types, 153-pair hand-calibrated domain distance matrix, 220 ingest queries). The causal graph, model-field extractions, and adversarial review traces all persist to 52 database tables.
 
 The seven collision strategies run in parallel per anomaly: implication matching, entity matching, keyword matching, model-field matching, causal-graph traversal, embedding similarity, belief-reality contradiction. Matches get blended, evaluated by an LLM, checked against prior publication, and promoted to hypotheses with resolution dates. The kill gauntlet then runs four adversarial rounds (mechanism, fact-check, competitor, barrier) plus a market-check; survivors get scored in a fresh context by an adversarial reviewer against four calibration anchors.
 
@@ -133,7 +133,7 @@ The pre-freeze methodology graph has **203 nodes, 171 directed edges, a 5-unit g
 
 **Reports and artifacts.** `generate_report.py`, `enrich_thesis.py`, `build_story_pdf.py`, `targeting.py`.
 
-60+ modules, 43 DB tables, 26 LLM prompts.
+60+ modules, 52 DB tables, 26 LLM prompts.
 
 ## Pre-registered summer 2026 study
 
@@ -156,7 +156,7 @@ A 12-week out-of-sample study runs June 1 through August 31, 2026 on the frozen 
 - Primary loses (D ≤ B or monotonicity violated): reject; null-result paper ships.
 - No post-hoc corpus additions. No scoring-weight changes. No primary/secondary swap. No retroactive exclusion. All four strata reported regardless of sign.
 
-**Prior contradictory evidence, and why the study still runs.** An earlier retrospective pilot (the "v3 Golden" validation run, `V3_GOLDEN_*` constants in `config.py`) produced Stratum D < Stratum B, directly contradicting H1. That pilot ran with `RETROSPECTIVE_DISABLE_WEB_SEARCH = True`, i.e. the kill phase could not check causal mechanisms against live web evidence, which is the specific channel through which cross-silo advantages are supposed to manifest. The summer 2026 study runs prospectively with web-searched mechanism kills, the regime H1 is actually about. If the summer study also produces D ≤ B or violates monotonicity, the manifest's decision rule kicks in: reject H1, ship the null paper, treat the framework as needing structural revision (not recalibration). See `docs/THEORY_CANON.md` §2 claim C4 for the full epistemic state.
+**Prior contradictory evidence, and why the study still runs.** An earlier retrospective pilot (the "v3 Golden" validation run, configured by the `V3_GOLDEN_*` constants in `config.py`) produced Stratum D < Stratum B, directly contradicting H1. That pilot ran with `RETROSPECTIVE_DISABLE_WEB_SEARCH = True`, i.e. the kill phase could not check causal mechanisms against live web evidence, which is the specific channel through which cross-silo advantages are supposed to manifest. The summer 2026 study runs prospectively with web-searched mechanism kills, the regime H1 is actually about. If the summer study also produces D ≤ B or violates monotonicity, the manifest's decision rule kicks in: reject H1, ship the null paper, treat the framework as needing structural revision (not recalibration). See `docs/THEORY_CANON.md` §2 claim C4 for the full epistemic state.
 
 Drift during the study is auto-detected by `python run.py preregister check` and reported in the final paper.
 
@@ -185,7 +185,7 @@ Instrument / methodology:
 ## Reading order
 
 - **Quick reader.** README, then the methodology brief PDF (`docs/methodology_brief.pdf`).
-- **Serious reader.** README → `docs/DATA_OVERVIEW.md` (complete table-by-table inventory) → `docs/HUNTER_THEORY.md` (ten-layer framework, the three walls, the topological hierarchy) → `docs/MATH_VERIFICATION.md` (empirical verification of every quantitative prediction against the frozen corpus; three supported, two refuted, with charts) → `docs/diamond_theses.md` (eighteen top pre-freeze theses, each resolvable to a Zenodo row) → `docs/engineering_evolution.md` (how the instrument changed between old and current pipelines) → `docs/research_themes.md` (eight structural themes HUNTER keeps surfacing) → `docs/HUNTER_STORY.md` (narrative) → `docs/EMPIRICAL_FINDINGS.md` (what the pre-freeze data actually said) → `docs/THEORY_CANON.md` (canonical vocabulary and the formally withdrawn overclaims).
+- **Serious reader.** README → `docs/DATA_OVERVIEW.md` (complete table-by-table inventory) → `docs/HUNTER_THEORY.md` (ten-layer framework, the three walls, the topological hierarchy) → `docs/MATH_VERIFICATION.md` (empirical verification of every quantitative prediction against the frozen corpus; three supported, two refuted, with charts) → `docs/diamond_theses.md` (eighteen top pre-freeze theses, each resolvable to a Zenodo row) → `docs/engineering_evolution.md` (how the instrument changed between old and current pipelines) → `docs/research_themes.md` (eight structural themes HUNTER keeps surfacing) → `docs/EMPIRICAL_FINDINGS.md` (what the pre-freeze data actually said, including the combined 324-hypothesis picture) → `docs/THEORY_CANON.md` (canonical vocabulary and the formally withdrawn overclaims).
 - **Replicator.** The above, plus `preregistration.json` with the SHA-locked manifest, plus `python run.py preregister check` against the frozen corpus.
 
 ## Contact
