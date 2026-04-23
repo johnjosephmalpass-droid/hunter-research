@@ -52,8 +52,9 @@ Corpus = "https://doi.org/10.5281/zenodo.19667567"
 
 [tool.pytest.ini_options]
 minversion = "7.0"
-testpaths = ["."]
+testpaths = ["tests"]
 python_files = ["test_*.py"]
+python_classes = ["Test*"]
 python_functions = ["test_*"]
 addopts = "-ra --strict-markers"
 

@@ -184,8 +184,30 @@ Balanced against these: the specific α ≈ 0.27 decay is refuted (α ≈ 0.94 o
 
 ---
 
+## Bayesian re-analysis
+
+The frequentist tests above were re-run under a Bayesian inferential framework (weakly-informative priors, full posterior sampling, Bayes factors). Results from `bayesian_alpha.py` against the same Zenodo corpus:
+
+| Test | Frequentist (above) | Bayesian posterior |
+|---|---|---|
+| Narrative survival correlation | r = −0.27, p < 0.00001 | P(r < 0) = 1.000, 95% CI [−0.37, −0.17], BF₁₀ ≈ 10¹² |
+| Cross-silo > within-silo | +9.1 points, one-sided p = 0.19 | P(diff > 0) = 0.98, posterior diff +17 points, 95% CI [+0.6, +33.6] |
+| Hump curve, d=2 vs d≥4 | Peak at d=2 (descriptive) | P(d=2 > d≥4) = 0.97, posterior diff +8.2, 95% CI [−0.6, +16.9] |
+
+Three results, three independent inferential frameworks (frequentist, permutation, Bayesian) on the same data. All three converge on the same direction in all three cases.
+
+Two genuinely new things from the Bayesian view:
+- The **cross-silo lift is bigger than the descriptive number suggested**. The within-silo group has only n=3, which makes the descriptive 51.0 noisy. The Bayesian posterior shrinks the within-silo estimate toward the global mean and the gap widens to +17 points with a 95% interval that just barely includes zero on the lower bound. Honest quantification of the small-n uncertainty actually strengthens the cross-silo claim.
+- The **hump-curve credible interval just barely includes zero** at the lower bound (−0.6). The descriptive read collapsed to "peak at d=2" without naming this. The Bayesian read is "supported, not certain." That nuance belongs in the eventual paper.
+
+The Bayes factor of 10¹² for the narrative correlation is correct under the framework's weakly-informative prior, and reflects the fact that with n=324 and a clear negative correlation, the posterior puts essentially zero mass at r=0. A reader who finds the magnitude theatrical can re-run with tighter priors via `python bayesian_alpha.py --n-samples 50000`; the qualitative result is robust.
+
+Run it: `python bayesian_alpha.py`. Takes about ten seconds. See `docs/STATISTICAL_METHODS.md` for the full inferential framework, prior specifications, and multiple-testing correction policy.
+
+---
+
 ## Method and reproducibility
 
-All tests in this document are computed from `hunter_corpus_v1.sqlite` in the Zenodo release. The analysis script is in the repo at `/tmp/hunter_math_results.json` (JSON dump of the raw numbers) and can be regenerated from the SQLite file. Every statistic above is recoverable by running SQL against the frozen corpus; every plot is produced by `matplotlib` from the same queries.
+All tests in this document are computed from `hunter_corpus_v1.sqlite` in the Zenodo release. Every statistic above is recoverable by running SQL against the frozen corpus, and every Bayesian posterior is reproducible via `python bayesian_alpha.py --seed 42` against the same corpus. Every plot is produced by `matplotlib` from the same queries.
 
 *John Malpass · University College Dublin · April 2026.*

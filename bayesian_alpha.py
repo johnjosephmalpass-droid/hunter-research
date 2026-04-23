@@ -183,7 +183,9 @@ def posterior_correlation_via_fisher_z(
     # Under uniform prior on r in [-1,1], prior density at r=0 is 0.5
     # Posterior density at r=0 estimated via kernel density
     from scipy.stats import gaussian_kde
-    posterior_density_at_zero = float(gaussian_kde(r_post)(0))
+    posterior_density_at_zero = float(gaussian_kde(r_post).evaluate(0)[0])
+    # Floor to avoid divide-by-zero when posterior puts essentially no mass at 0
+    posterior_density_at_zero = max(posterior_density_at_zero, 1e-15)
     bf_10 = 0.5 / posterior_density_at_zero  # BF in favour of H1
 
     return {
