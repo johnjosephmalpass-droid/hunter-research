@@ -190,6 +190,8 @@ If you want the argument, start with `docs/HUNTER_THEORY.md` for the ten layers.
 
 If you want the inferential framework (identification, power, Bayesian posteriors, multiple-testing correction, robustness specs), read `docs/STATISTICAL_METHODS.md`. The Bayesian re-analysis script `python bayesian_alpha.py` runs the posterior inference against the frozen Zenodo corpus and prints results in under ten seconds.
 
+If you want the unifying equation, read `docs/CIT_EQUATION.md` — a working-draft of the Compositional Information Theory paper. Five-factor decomposition of compositional alpha (synergy × conversion × lead time × decay − publication cost). The four pre-registered tests (CIT-1 through CIT-4) in §6 run against the summer-2026 study.
+
 If you want to replicate, pull the frozen Zenodo corpus, clone this repo, and run `python run.py preregister check` against the locked manifest.
 
 Supporting docs: `docs/engineering_evolution.md` walks through how the pipeline changed between the old and current versions. `docs/research_themes.md` covers the eight recurring structural themes in the top-scoring output. `docs/EMPIRICAL_FINDINGS.md` covers the pre-freeze empirical analysis including the combined 324-hypothesis picture. `docs/THEORY_CANON.md` is the canonical vocabulary plus the formally withdrawn overclaims.
